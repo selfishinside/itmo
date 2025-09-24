@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="main">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/aws-xml-protocol-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/arns-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/aws-query-protocol-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/auth-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/regions-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/s3-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/sdk-core-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/json-utils-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/protocol-core-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/apache-client-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/eventstream-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/annotations-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/endpoints-spi-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/metrics-spi-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/profiles-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/utils-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/third-party-jackson-core-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/crt-core-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/http-client-spi-2.20.126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/software/amazon/awssdk/s3/main/aws-core-2.20.126.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

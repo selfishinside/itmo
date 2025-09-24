@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/bin/launcher.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/bin/wildfly-elytron-tool.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

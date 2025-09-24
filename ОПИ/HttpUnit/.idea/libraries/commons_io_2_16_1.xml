@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="commons-io-2.16.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/commons/io/main/commons-io-2.16.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

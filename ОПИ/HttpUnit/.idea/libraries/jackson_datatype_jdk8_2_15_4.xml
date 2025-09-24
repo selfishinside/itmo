@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jackson-datatype-jdk8-2.15.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/main/jackson-datatype-jdk8-2.15.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

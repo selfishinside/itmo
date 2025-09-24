@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="json-patch-1.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/github/fge/json-patch/main/json-patch-1.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

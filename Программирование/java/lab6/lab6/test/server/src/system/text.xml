@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<set>
+  <Vehicle>
+    <id>39</id>
+    <name>de</name>
+    <coordinates>
+      <x>21</x>
+      <y>432</y>
+    </coordinates>
+    <creationDate>2024-04-16 20:15:03.743 UTC</creationDate>
+    <enginePower>342</enginePower>
+    <type>PLANE</type>
+    <fuelType>KEROSENE</fuelType>
+  </Vehicle>
+  <Vehicle>
+    <id>24</id>
+    <name>fkr</name>
+    <coordinates>
+      <x>231</x>
+      <y>21</y>
+    </coordinates>
+    <creationDate>2024-04-16 21:17:41.391 UTC</creationDate>
+    <enginePower>21</enginePower>
+    <type>PLANE</type>
+    <fuelType>KEROSENE</fuelType>
+  </Vehicle>
+</set>

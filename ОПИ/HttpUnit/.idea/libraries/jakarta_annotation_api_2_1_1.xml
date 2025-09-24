@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta.annotation-api-2.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/annotation/api/main/jakarta.annotation-api-2.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

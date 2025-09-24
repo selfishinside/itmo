@@ -1,0 +1,113 @@
+/* Base styles */
+:root {
+    --bg-dark: #121212;
+    --bg-darker: #1E1E1E;
+    --bg-darkest: #2D2D2D;
+    --text-light: #F5F5F5;
+    --text-lighter: #FFFFFF;
+    --text-muted: #A0A0A0;
+    --border-color: #444;
+    --accent-color: #3A86FF;
+    --success-color: #4CAF50;
+    --error-color: #F44336;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* Layout */
+#animation-container {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-darker);
+    z-index: 0;
+}
+
+#bouncing-image {
+    position: absolute;
+    width: 150px;
+    height: auto;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Buttons */
+button {
+    background: var(--bg-darkest);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #3A3A3A;
+    color: var(--text-lighter);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background: #333;
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-darkest);
+    color: var(--text-light);
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+th {
+    background: #3A3A3A;
+    color: var(--text-lighter);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Typography */
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-light);
+    background: var(--bg-darkest);
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.hit { color: var(--success-color); }
+.miss { color: var(--error-color); }

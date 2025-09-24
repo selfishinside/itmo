@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="main31">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-xacml-saml-impl-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-saml-impl-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-xmlsec-impl-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-security-api-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/cryptacular-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-core-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-xacml-saml-api-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-xacml-impl-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-soap-api-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/java-support-8.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-xacml-api-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-xmlsec-api-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-saml-api-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-profile-api-4.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/opensaml/main/opensaml-security-impl-4.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

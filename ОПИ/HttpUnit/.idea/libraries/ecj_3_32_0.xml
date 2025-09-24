@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ecj-3.32.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/eclipse/jdt/ecj/main/ecj-3.32.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

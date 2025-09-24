@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wildfly-patching-25.0.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/as/patching/main/wildfly-patching-25.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="netty-resolver-dns-4.1.111.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/netty/netty-resolver-dns/main/netty-resolver-dns-4.1.111.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

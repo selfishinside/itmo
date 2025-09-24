@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="web3" default="build"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="antlib:net.sf.antcontrib ">
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+    <property name="dir.versions" value="versions"/>
+
+    <property file="build.properties"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+
+    <path id="classpath.test">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <pathelement location="${classes.dir}"/>
+    </path>
+
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="${contrib}"/>
+        </classpath>
+    </taskdef>
+
+    <target name="clean">
+        <echo message="**********CLEANING**********"/>
+        <delete dir="${build.dir}"/>
+        <delete dir="${junit.report.dir}"/>
+        <echo message="**********CLEANING COMPLETED**********"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <echo message="------COMPILING------"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false"/>
+        <javac destdir="${test.classes.dir}" srcdir="${test.dir}" includeantruntime="false" encoding="utf-8">
+            <classpath refid="classpath.test"/>
+        </javac>
+        <echo message="------COMPILING COMPLETED------"/>
+    </target>
+
+    <target name="build" depends="compile">
+        <echo message="**********BUILDING**********"/>
+        <copy todir="${build.dir.lib}">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+        <copy todir="${build.dir}">
+            <fileset dir="${web.dir}"/>
+        </copy>
+        <copy todir="${classes.dir}">
+            <fileset dir="${resources.dir}"/>
+        </copy>
+        <jar destfile="${build.dir}/${ant.project.name}.jar">
+            <fileset dir="${classes.dir}"/>
+            <manifest>
+                <attribute name="Created-By" value="zxc"/>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="NoClass"/>
+            </manifest>
+        </jar>
+        <war destfile="${build.dir}/${ant.project.name}.war" webxml="${build.web.xml}">
+            <fileset dir="${build.dir}"/>
+            <manifest>
+                <attribute name="Created-By" value="zxc"/>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="NoClass"/>
+            </manifest>
+        </war>
+        <echo message="**********BUILDING COMPLETED**********"/>
+    </target>
+
+    <target name="test" depends="build">
+        <echo message="------TESTING------"/>
+        <mkdir dir="${junit.report.dir}"/>
+        <trycatch>
+            <try>
+                <junit printsummary="yes" fork="yes" haltonfailure="true" showoutput="true">
+                    <classpath>
+                        <path refid="classpath.test"/>
+                        <pathelement location="${test.classes.dir}"/>
+                    </classpath>
+                    <formatter type="xml"/>
+                    <batchtest todir="${junit.report.dir}">
+                        <fileset dir="${test.dir}" includes="**/*Test.java"/>
+                    </batchtest>
+                </junit>
+                <property name="test.successful" value="true"/>
+            </try>
+            <catch>
+                <property name="test.failed" value="true"/>
+            </catch>
+        </trycatch>
+        <echo message="------TESTING COMPLETED------"/>
+    </target>
+
+    <target name="native2ascii">
+        <echo message="**********NATIVE2ASCII**********"/>
+        <delete dir="${native2ascii.resources}"/>
+        <native2ascii encoding="utf-8" src="${resources.dir}" dest="${native2ascii.resources}"
+                      includes="**/*.properties"/>
+        <echo message="**********NATIVE2ASCII COMPLETED**********"/>
+    </target>
+
+    <target name="team">
+        <echo message="Получение последних 3 ревизий из SVN..."/>
+        <mkdir dir="${dir.versions}"/>
+
+        <exec executable="bash">
+            <arg value="-c"/>
+            <arg value="svn log -q -l 3 ${svn.repo.url} | grep '^r' | cut -d ' ' -f1 | sed 's/r//' | paste -sd ',' - > ${dir.versions}/revs.txt"/>
+        </exec>
+
+        <loadresource property="revs.raw">
+            <filterchain>
+                <striplinebreaks/>
+            </filterchain>
+            <file file="${dir.versions}/revs.txt"/>
+        </loadresource>
+
+        <echo message="Ревизии для обработки: '${revs.raw}'"/>
+
+        <!-- Тест: просто вывести ревизии -->
+        <foreach list="${revs.raw}" param="rev" target="echo.rev"/>
+
+        <!-- Затем реально вызываем экспорт и сборку -->
+        <foreach list="${revs.raw}" param="rev" target="svn.export.build"/>
+
+        <zip destfile="${output.zip}">
+            <fileset dir="${dir.versions}">
+                <include name="rev*/**/*.jar"/>
+            </fileset>
+        </zip>
+
+        <echo message="Упаковка завершена: ${output.zip}"/>
+    </target>
+
+    <target name="echo.rev">
+        <echo message="Текущая ревизия: ${rev}"/>
+    </target>
+
+    <target name="svn.export.build">
+        <echo message=">> Обработка ревизии ${rev}"/>
+
+        <exec executable="svn" failonerror="true">
+            <arg value="export"/>
+            <arg value="-r"/>
+            <arg value="${rev}"/>
+            <arg value="${svn.repo.url}"/>
+            <arg value="${dir.versions}/rev${rev}"/>
+            <arg value="--force"/>
+        </exec>
+
+        <ant dir="${dir.versions}/rev${rev}" target="build"/>
+    </target>
+
+</project>
+

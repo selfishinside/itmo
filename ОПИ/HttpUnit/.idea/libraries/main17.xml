@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main17">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/cxf/main/cxf-core-4.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/cxf/main/cxf-rt-features-logging-4.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

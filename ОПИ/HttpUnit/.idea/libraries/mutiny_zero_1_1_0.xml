@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mutiny-zero-1.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/reactive/mutiny/zero/main/mutiny-zero-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

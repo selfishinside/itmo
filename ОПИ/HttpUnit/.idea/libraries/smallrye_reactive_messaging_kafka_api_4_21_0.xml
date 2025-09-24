@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="smallrye-reactive-messaging-kafka-api-4.21.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/reactive/messaging/connector/kafka/api/main/smallrye-reactive-messaging-kafka-api-4.21.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

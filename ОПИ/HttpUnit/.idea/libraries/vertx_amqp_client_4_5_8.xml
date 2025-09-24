@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vertx-amqp-client-4.5.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/vertx/client/amqp/main/vertx-amqp-client-4.5.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

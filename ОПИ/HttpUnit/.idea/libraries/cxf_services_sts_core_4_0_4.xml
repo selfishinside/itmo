@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cxf-services-sts-core-4.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/cxf/services-sts/main/cxf-services-sts-core-4.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

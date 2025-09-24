@@ -1,0 +1,157 @@
+:root {
+    --light-bg: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --medium-gray: #E0E0E0;
+    --dark-gray: #757575;
+    --text-primary: #212121;
+    --text-secondary: #616161;
+    --accent-blue: #1E88E5;
+    --accent-blue-dark: #1565C0;
+    --success-green: #43A047;
+    --error-red: #E53935;
+    --graph-bg: #FAFAFA;
+    --graph-line: #BDBDBD;
+}
+
+/* Base Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: var(--light-bg);
+    color: var(--text-primary);
+}
+
+/* Header */
+.header-container {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-blue);
+}
+
+.header-title {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0.5rem 0;
+    color: var(--accent-blue);
+}
+
+/* UI Components */
+.button {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: var(--accent-blue-dark);
+    transform: translateY(-1px);
+}
+
+.button-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Tables */
+.data-table {
+    width: 100%;
+    background: var(--light-gray);
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.data-table th {
+    background: var(--medium-gray);
+    padding: 1rem;
+    font-weight: 500;
+    text-align: left;
+    color: var(--text-primary);
+}
+
+.data-table td {
+    padding: 0.75rem;
+    border-top: 1px solid var(--medium-gray);
+    color: var(--text-primary);
+}
+
+/* Graph */
+.graph-container {
+    background: var(--light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.graph-svg {
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    background: var(--graph-bg);
+}
+
+/* Стили для улучшения видимости графика */
+.graph-svg line, .graph-svg path {
+    stroke: var(--dark-gray);
+}
+
+.graph-svg text {
+    fill: var(--text-primary);
+    font-size: 12px;
+}
+
+.graph-svg .grid-line {
+    stroke: var(--graph-line);
+    stroke-width: 1;
+    stroke-dasharray: 4,4;
+}
+
+.graph-svg .data-line {
+    stroke: var(--accent-blue);
+    stroke-width: 2;
+    fill: none;
+}
+
+.graph-svg .data-point {
+    fill: var(--accent-blue);
+    stroke: white;
+    stroke-width: 1.5;
+}
+
+/* Clock */
+.clock {
+    font-family: 'Digital-7 Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--accent-blue);
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Links */
+.action-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.action-link:hover {
+    color: var(--accent-blue-dark);
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.text-success { color: var(--success-green); }
+.text-error { color: var(--error-red); }
+.text-center { text-align: center; }
+.shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }

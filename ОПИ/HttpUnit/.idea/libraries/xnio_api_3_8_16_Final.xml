@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="xnio-api-3.8.16.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/xnio/main/xnio-api-3.8.16.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

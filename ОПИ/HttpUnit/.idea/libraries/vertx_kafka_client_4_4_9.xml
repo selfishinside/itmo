@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vertx-kafka-client-4.4.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/vertx/client/kafka/main/vertx-kafka-client-4.4.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

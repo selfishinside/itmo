@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="commons-collections-3.2.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/commons/collections/main/commons-collections-3.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

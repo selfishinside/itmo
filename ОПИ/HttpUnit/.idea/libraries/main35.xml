@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="main35">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/ws/security/main/wss4j-policy-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/ws/security/main/wss4j-ws-security-stax-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/ws/security/main/wss4j-bindings-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/ws/security/main/wss4j-ws-security-common-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/ws/security/main/wss4j-ws-security-policy-stax-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/ws/security/main/wss4j-ws-security-dom-3.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

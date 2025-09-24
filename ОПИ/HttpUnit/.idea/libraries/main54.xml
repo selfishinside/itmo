@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main54">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-client-microprofile/main/microprofile-rest-client-2.1.5.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-client-microprofile/main/microprofile-rest-client-base-2.1.5.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

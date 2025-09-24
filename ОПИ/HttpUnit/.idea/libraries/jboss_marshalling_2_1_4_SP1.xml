@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-marshalling-2.1.4.SP1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/marshalling/main/jboss-marshalling-2.1.4.SP1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

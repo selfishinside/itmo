@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-vfs-3.3.2.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/vfs/main/jboss-vfs-3.3.2.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

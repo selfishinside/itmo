@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main25">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/as/jsf-injection/main/weld-jsf-5.1.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/as/jsf-injection/main/wildfly-jsf-injection-33.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

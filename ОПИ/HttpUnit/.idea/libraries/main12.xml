@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="main12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/opentelemetry/main/smallrye-opentelemetry-exporters-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/opentelemetry/main/smallrye-opentelemetry-rest-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/opentelemetry/main/smallrye-opentelemetry-propagation-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/opentelemetry/main/smallrye-opentelemetry-cdi-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/opentelemetry/main/smallrye-opentelemetry-api-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

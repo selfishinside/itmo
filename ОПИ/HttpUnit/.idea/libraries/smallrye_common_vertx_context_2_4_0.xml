@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="smallrye-common-vertx-context-2.4.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/common/vertx-context/main/smallrye-common-vertx-context-2.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jackson-databind-2.15.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/fasterxml/jackson/core/jackson-databind/main/jackson-databind-2.15.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

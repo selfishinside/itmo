@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-metadata-common-16.0.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/metadata/common/main/jboss-metadata-common-16.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

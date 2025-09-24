@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main20">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/activemq/artemis/journal/main/artemis-journal-2.35.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/activemq/artemis/journal/main/activemq-artemis-native-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

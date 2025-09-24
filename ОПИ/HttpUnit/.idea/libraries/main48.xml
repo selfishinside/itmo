@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main48">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/james/mime4j/main/apache-mime4j-dom-0.8.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/james/mime4j/main/apache-mime4j-storage-0.8.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/james/mime4j/main/apache-mime4j-core-0.8.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

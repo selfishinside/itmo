@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="wildfly-33.0.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/wildfly-ee-feature-pack.zip!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/jboss-modules.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/wildfly-galleon-pack.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

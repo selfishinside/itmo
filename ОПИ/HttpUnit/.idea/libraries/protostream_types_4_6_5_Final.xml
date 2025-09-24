@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="protostream-types-4.6.5.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/infinispan/protostream/types/main/protostream-types-4.6.5.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

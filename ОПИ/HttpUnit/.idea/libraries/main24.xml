@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main24">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/ironjacamar/api/main/ironjacamar-core-api-3.0.9.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/ironjacamar/api/main/ironjacamar-common-spi-3.0.9.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/ironjacamar/api/main/ironjacamar-common-api-3.0.9.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

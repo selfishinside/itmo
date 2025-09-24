@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаба №1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    <h1>Кара-Огланов Руслан Денисович</h1>
+    <h3>Группа Веб - прогр 1.1 (Р3207), Вариант 408742</h3>
+</div>
+
+<div class="container">
+    <div class="left-block" id="graph">
+        <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Оси со стрелками -->
+            <line stroke="gray" x1="0" x2="300" y1="150" y2="150"></line>
+            <line stroke="gray" x1="150" x2="150" y1="0" y2="300"></line>
+            <polygon fill="white" points="150,0 144,15 156,15" stroke="white"></polygon>
+            <polygon fill="white" points="300,150 285,156 285,144" stroke="white"></polygon>
+        
+            <!-- Засечки -->
+            <line stroke="gray" x1="200" x2="200" y1="155" y2="145"></line>
+            <line stroke="gray" x1="250" x2="250" y1="155" y2="145"></line>
+            <line stroke="gray" x1="50" x2="50" y1="155" y2="145"></line>
+            <line stroke="gray" x1="100" x2="100" y1="155" y2="145"></line>
+            <line stroke="gray" x1="145" x2="155" y1="100" y2="100"></line>
+            <line stroke="gray" x1="145" x2="155" y1="50" y2="50"></line>
+            <line stroke="gray" x1="145" x2="155" y1="200" y2="200"></line>
+            <line stroke="gray" x1="145" x2="155" y1="250" y2="250"></line>
+        
+            <!-- Подписи к засечкам -->
+            <text fill="white" x="195" y="140">R/2</text>
+            <text fill="white" x="248" y="140">R</text>
+            <text fill="white" x="40" y="140">-R</text>
+            <text fill="white" x="90" y="140">-R/2</text>
+            <text fill="white" x="160" y="105">R/2</text>
+            <text fill="white" x="160" y="55">R</text>
+            <text fill="white" x="160" y="205">-R/2</text>
+            <text fill="white" x="160" y="255">-R</text>
+            <text fill="white" x="160" y="10">Y</text>
+            <text fill="white" x="290" y="140">X</text>
+        
+            <!-- Полукруг (верхняя левая часть, радиус R/2) -->
+            <path d="M 100 150 A 50 50 0 0 1 150 100 L 150 150 Z" fill="#1E90FF" fill-opacity="0.6"></path>
+        
+            <!-- Прямоугольник (верхняя правая часть) -->
+            <rect x="150" y="50" width="50" height="100" fill="#1E90FF" fill-opacity="0.6"></rect>
+        
+            <!-- Перевернутый треугольник (нижняя часть) -->
+            <polygon points="100,150 150,150 150,250" fill="#1E90FF" fill-opacity="0.6"></polygon>
+        </svg>
+    </div>
+    
+    <div class="right-block">
+        <h4 class="input">Выберите X</h4>
+        <div id="xCheckboxes">
+            <label><input type="checkbox" name="xValue" value="-4" onclick="selectOnlyOne('xValue', this)"> <span>-4</span></label><br>
+            <label><input type="checkbox" name="xValue" value="-3" onclick="selectOnlyOne('xValue', this)"> -3</label><br>
+            <label><input type="checkbox" name="xValue" value="-2" onclick="selectOnlyOne('xValue', this)"> -2</label><br>
+            <label><input type="checkbox" name="xValue" value="-1" onclick="selectOnlyOne('xValue', this)"> -1</label><br>
+            <label><input type="checkbox" name="xValue" value="0" onclick="selectOnlyOne('xValue', this)"> 0</label><br>
+            <label><input type="checkbox" name="xValue" value="1" onclick="selectOnlyOne('xValue', this)"> 1</label><br>
+            <label><input type="checkbox" name="xValue" value="2" onclick="selectOnlyOne('xValue', this)"> 2</label><br>
+            <label><input type="checkbox" name="xValue" value="3" onclick="selectOnlyOne('xValue', this)"> 3</label><br>
+            <label><input type="checkbox" name="xValue" value="4" onclick="selectOnlyOne('xValue', this)"> 4</label><br>
+        </div>
+
+        <h4 class="input">Введите Y</h4>
+        <input type="number" id="yInput" step="any" min="-5" max="5" placeholder="Введите Y от -5 до 5"/>
+
+        <h4 class="input">Выберите R</h4>
+        <div id="rCheckboxes">
+            <label><input type="checkbox" name="rValue" value="1" onclick="selectOnlyOne('rValue', this)"> 1</label><br>
+            <label><input type="checkbox" name="rValue" value="1.5" onclick="selectOnlyOne('rValue', this)"> 1.5</label><br>
+            <label><input type="checkbox" name="rValue" value="2" onclick="selectOnlyOne('rValue', this)"> 2</label><br>
+            <label><input type="checkbox" name="rValue" value="2.5" onclick="selectOnlyOne('rValue', this)"> 2.5</label><br>
+            <label><input type="checkbox" name="rValue" value="3" onclick="selectOnlyOne('rValue', this)"> 3</label><br>
+        </div>
+
+        <button id="getButton" value="1">Проверить</button>
+    </div>
+</div>
+
+<h1 class="results">Результаты</h1>
+
+<div id="table">
+    <table id="resultsTable" border="1">
+        <tr>
+            <th><h2 class="headerOfTable">X</h2></th>
+            <th><h2 class="headerOfTable">Y</h2></th>
+            <th><h2 class="headerOfTable">R</h2></th>
+            <th><h2 class="headerOfTable">Ответ</h2></th>
+            <th><h2 class="headerOfTable">Время выполнения (наносекунды)</h2></th>
+            <th><h2 class="headerOfTable">Время на сервере</h2></th>
+        </tr>
+    </table>
+</div>
+
+<script charset="utf-8" type="text/javascript">
+    let x = null;
+    let y = null;
+    let r = null;
+
+    // Функция для отправки запроса
+    function sendRequest() {
+    const url = new URL('./fcgi-bin/my_app.jar', window.location.href);
+    url.searchParams.set('x', x);
+    url.searchParams.set('y', y);
+    url.searchParams.set('r', r);
+
+    fetch(url.href, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Ошибка сети или сервера');
+        }
+        return response.text();
+    })
+    .then(result => {
+    const table = document.getElementById("resultsTable");
+    const newRow = table.insertRow();
+
+    const xCell = newRow.insertCell(0);
+    const yCell = newRow.insertCell(1);
+    const rCell = newRow.insertCell(2);
+    const answerCell = newRow.insertCell(3);
+    const executionTimeCell = newRow.insertCell(4);
+    const serverTimeCell = newRow.insertCell(5);
+
+    xCell.innerText = x;
+    yCell.innerText = y;
+    rCell.innerText = r;
+
+    const jsonResult = JSON.parse(result);
+    serverTimeCell.innerText = jsonResult.serverTime;
+    executionTimeCell.innerText = jsonResult.executionTime;
+
+    // Проверяем попадание и изменяем текст и класс строки
+    if (jsonResult.answer) {
+    answerCell.innerText = "Входит";
+    newRow.classList.add("in-answer-row"); // Класс для строки, если попадает
+    } else {
+    answerCell.innerText = "Не входит";
+    newRow.classList.add("out-answer-row"); // Класс для строки, если не попадает
+    }
+
+    // Применение цвета ко всем ячейкам в строке
+    newRow.querySelectorAll('td').forEach(cell => {
+    if (jsonResult.answer) {
+        cell.style.color = "#A29BFE";
+    } else {
+        cell.style.color = "red";
+    }
+});
+
+
+    })
+
+    .catch(error => {
+        console.error("Ошибка:", error.message);
+    });
+    }
+
+
+    // Функция для выбора только одного чекбокса в группе
+    function selectOnlyOne(name, selectedCheckbox) {
+        document.querySelectorAll(`input[name="${name}"]`).forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        selectedCheckbox.checked = true;
+    }
+
+    document.getElementById("getButton").onclick = async function () {
+        // получаем x y r 
+        const xCheckboxes = document.querySelectorAll('input[name="xValue"]');
+        x = Array.from(xCheckboxes).find(checkbox => checkbox.checked)?.value;
+        y = document.getElementById("yInput").value;
+
+        const rCheckboxes = document.querySelectorAll('input[name="rValue"]');
+        r = Array.from(rCheckboxes).find(checkbox => checkbox.checked)?.value;
+        //проверяем данные
+        let validationPassed = true;
+        let errorMessage = "";
+        // валидация введённых данных
+        if (!x) {
+            validationPassed = false;
+            errorMessage += "Выберите значение X.\n";
+        }
+
+        if (!y || isNaN(y) || y < -5 || y > 5) {
+            validationPassed = false;
+            errorMessage += "Введите корректное значение Y от -5 до 5.\n";
+        }
+
+        if (!r) {
+            validationPassed = false;
+            errorMessage += "Выберите значение R.\n";
+        }
+        // обработка ошибок валидации
+        if (!validationPassed) {
+            alert(errorMessage);
+            return;
+        }
+
+        // Отправляем запрос на сервер
+        sendRequest();
+    }
+</script>
+</body>
+</html>
+

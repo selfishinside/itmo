@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main14">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/infinispan/persistence/jdbc/main/infinispan-cachestore-jdbc-common-jakarta-14.0.29.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/infinispan/persistence/jdbc/main/infinispan-cachestore-jdbc-jakarta-14.0.29.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

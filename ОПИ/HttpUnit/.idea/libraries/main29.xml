@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main29">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/eclipse/jgit/main/org.eclipse.jgit-6.8.0.202311291450-r.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/eclipse/jgit/main/org.eclipse.jgit.ssh.apache-6.8.0.202311291450-r.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

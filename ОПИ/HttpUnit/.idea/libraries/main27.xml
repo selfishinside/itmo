@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main27">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/infinispan/hibernate-cache/main/infinispan-hibernate-cache-commons-14.0.29.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/infinispan/hibernate-cache/main/infinispan-hibernate-cache-spi-14.0.29.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/infinispan/hibernate-cache/main/infinispan-hibernate-cache-v62-14.0.29.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

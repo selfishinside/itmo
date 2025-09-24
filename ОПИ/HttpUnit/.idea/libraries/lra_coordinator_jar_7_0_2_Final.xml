@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lra-coordinator-jar-7.0.2.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/narayana/rts/lra-coordinator/main/lra-coordinator-jar-7.0.2.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

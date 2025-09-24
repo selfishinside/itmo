@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zstd-jni-1.5.6-3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/github/luben/zstd-jni/main/zstd-jni-1.5.6-3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

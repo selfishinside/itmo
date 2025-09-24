@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main37">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/servlet/jstl/api/main/jakarta.servlet.jsp.jstl-api-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/servlet/jstl/api/main/jakarta.servlet.jsp.jstl-3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

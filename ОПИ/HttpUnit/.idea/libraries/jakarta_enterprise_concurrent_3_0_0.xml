@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta.enterprise.concurrent-3.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/glassfish/jakarta/enterprise/concurrent/main/jakarta.enterprise.concurrent-3.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

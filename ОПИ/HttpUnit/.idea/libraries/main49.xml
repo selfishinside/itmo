@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main49">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/projectodd/vdx/main/vdx-core-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/projectodd/vdx/main/vdx-wildfly-1.1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

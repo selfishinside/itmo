@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="narayana-jts-integration-7.0.2.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/jts/integration/main/narayana-jts-integration-7.0.2.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

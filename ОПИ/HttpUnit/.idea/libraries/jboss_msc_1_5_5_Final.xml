@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-msc-1.5.5.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/msc/main/jboss-msc-1.5.5.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

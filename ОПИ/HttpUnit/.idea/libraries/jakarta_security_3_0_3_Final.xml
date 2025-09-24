@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta-security-3.0.3.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/jakarta/security/main/jakarta-security-3.0.3.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

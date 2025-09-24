@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>#{msg.lab}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="webjars" name="primeflex/3.3.1/primeflex.min.css" />
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+    <!--    <h:outputStylesheet library="styles" name="./css/styles.css"/>-->
+    <link rel="stylesheet" href="css/styles.css" />
+</h:head>
+
+<h:body>
+
+
+    <!-- Header -->
+    <h:panelGroup layout="block" styleClass="header-container">
+        <h1 class="header-title">#{msg.lab_title}</h1>
+        <h1>#{msg.subject} <span class="pink-header">#{msg.subject_name}</span></h1>
+        <h2 class="author-info">
+            #{msg.fio} <span class="pink-header">#{msg.name_of_person}</span>
+            #{msg.group} <span class="pink-header">#{msg.num_group}</span>
+            #{msg.variant} <span class="pink-header">#{msg.num_variant}</span>
+        </h2>
+    </h:panelGroup>
+
+    <!-- main panel -->
+    <div>
+        <p:splitter>
+            <p:splitterPanel styleClass="flex align-items-center justify-content-center">
+                <h:form id="data-form">
+                    <h6>#{msg.x_label} </h6>
+                    <h:panelGrid>
+                        <p:selectOneMenu id="x" value="#{formBean.x}" required="true" requiredMessage='#{msg.x_ms}'>
+                            <f:selectItem itemLabel="-2" itemValue="#{-2}" />
+                            <f:selectItem itemLabel="-1.5" itemValue="#{-1.5}" />
+                            <f:selectItem itemLabel="-1" itemValue="#{-1}" />
+                            <f:selectItem itemLabel="-0.5" itemValue="#{-0.5}" />
+                            <f:selectItem itemLabel="0" itemValue="#{0}" />
+                            <f:selectItem itemLabel="0.5" itemValue="#{0.5}" />
+                            <f:selectItem itemLabel="1" itemValue="#{1}" />
+                            <f:selectItem itemLabel="1.5" itemValue="#{1.5}" />
+                            <p:ajax update="graph-container" process="@this x" oncomplete="addSvgListener()" />
+                        </p:selectOneMenu>
+                    </h:panelGrid>
+
+                    <!-- Поле Y: inputText -->
+                    <div class="field col-12 md:col-4">
+                        <!--                        <p:outputLabel for="y" value="Y: "/>-->
+                        <h6>#{msg.y_label} </h6>
+                        <p:inputText id="y" placeholder="(-5 ... 3)" value="#{formBean.y}" required="true" requiredMessage="#{msg.y_ms}" validatorMessage="#{msg.y_er}">
+                            <f:validateDoubleRange minimum="-5" maximum="3"/>
+                            <p:ajax event="input" update="graph-container" process="@this y" oncomplete="addSvgListener()" />
+                        </p:inputText>
+                    </div>
+
+
+                    <h6>#{msg.r_label} </h6>
+                    <p:selectOneMenu id="r" value="#{formBean.r}" required="true" requiredMessage="#{msg.r_ms}" widgetVar="r">
+                        <f:selectItem itemLabel="1" itemValue="1" />
+                        <f:selectItem itemLabel="2" itemValue="2" />
+                        <f:selectItem itemLabel="3" itemValue="3" />
+                        <f:selectItem itemLabel="4" itemValue="4" />
+                        <f:selectItem itemLabel="5" itemValue="5" />
+
+                        <p:ajax listener="#{formBean.clear}" update="result-table graph-container" process="@this r" oncomplete="addSvgListener()" />
+                        <p:ajax update="graph-container" process="@this r" oncomplete="addSvgListener()" />
+
+                    </p:selectOneMenu>
+
+
+                    <br/>
+
+
+                    <!-- Кнопка отправки формы -->
+                    <p:commandButton icon="pi pi-check"
+                                     id="btn_cfrm" value="#{msg.send}" action="#{formBean.submit(false)}" ajax="true"
+                                     update="data-form result-table graph-container"
+                                     styleClass="px-4 py-2"
+                                     oncomplete="addSvgListener()"
+                    />
+
+                    <!-- Кнопка очистки таблицы -->
+                    <p:commandButton icon="pi pi-trash"
+                                     styleClass="px-4 py-2"
+                                     id="btn_rst" value="#{msg.trash}" action="#{formBean.clear()}" ajax="true"
+                                     update="data-form result-table graph-container"
+                                     process="@this"
+                                     oncomplete="addSvgListener()"
+                    />
+
+                    <!-- Сообщения -->
+                </h:form>
+                <h:form id="hidden-form">
+                    <h:inputHidden value="#{formBean.graph_x}" id="graph-x"/>
+                    <h:inputHidden value="#{formBean.graph_y}" id="graph-y"/>
+                    <h:inputHidden value="#{formBean.graph_r}" id="graph-r"/>
+                    <!--                    <h:commandButton id="graph-send" action="#{formBean.submit(true)}" style="opacity: 0"/>-->
+                    <p:commandButton id="graph-send"
+                                     ajax="true"
+                                     action="#{formBean.submit(true)}"
+                                     process="@this graph-x graph-y graph-r"
+                                     update="data-form result-table graph-container"
+                                     oncomplete="addSvgListener()"
+                                     style="display:none;" />
+                </h:form>
+            </p:splitterPanel>
+            <!-- Graph -->
+            <p:splitterPanel styleClass="flex align-items-center justify-content-center">
+                <h:panelGroup id="graph-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="svg" width="500" height="500">
+                        <!--        <svg id="svg" width="500" height="500">-->
+                        <polygon id="triangle"
+                                 points="
+                                250,250
+                                250,#{250 + formBean.r * 40 / 2}
+                                #{250 - formBean.r * 40},250
+                            "
+                                 fill="#122028" fill-opacity="0.6" />
+                        <!-- square-->
+                        <rect id="rectangle"
+                              x="#{250 - formBean.r * 40 / 2}"
+                              y="#{250 - formBean.r * 40}"
+                              width="#{formBean.r * 40 / 2}"
+                              height="#{formBean.r * 40}"
+                              fill="#122028" fill-opacity="0.6" />
+                        <!-- circle-->
+                        <path id="quarterCircle"
+                              d="
+                            M ${250} ${250}
+                            L #{250 + formBean.r * 40 / 2} #{250}
+                            A #{formBean.r * 40 / 2} #{formBean.r * 40 / 2} 0 0 1 ${250} #{250 + formBean.r * 40 / 2}
+                            Z "
+                              fill="#122028" fill-opacity="0.6" />
+
+                        <!--X line-->
+                        <line x1="0" y1="250" x2="500" y2="250" stroke="#122028" />
+                        <!--Y line-->
+                        <line x1="250" y1="0" x2="250" y2="500" stroke="#122028" />
+
+                        <line x1="210" y1="248" x2="210" y2="252" stroke="#122028" /> <!-- -1 point on x -->
+                        <line x1="290" y1="248" x2="290" y2="252" stroke="#122028" /> <!-- 1 point on x -->
+                        <text x="205" y="240">-1</text> <!-- '-1' on x -->
+                        <text x="285" y="240">1</text> <!-- '1' on x -->
+
+                        <line x1="170" y1="248" x2="170" y2="252" stroke="#122028" /> <!-- -2 point on x -->
+                        <line x1="330" y1="248" x2="330" y2="252" stroke="#122028" /> <!-- 2 point on x -->
+                        <text x="165" y="240">-2</text> <!-- '-2' on x -->
+                        <text x="325" y="240">2</text> <!-- '2' on x -->
+
+                        <line x1="130" y1="248" x2="130" y2="252" stroke="#122028" /> <!-- -3 point on x -->
+                        <line x1="370" y1="248" x2="370" y2="252" stroke="#122028" /> <!-- 3 point on x -->
+                        <text x="125" y="240">-3</text> <!-- '-3' on x -->
+                        <text x="365" y="240">3</text> <!-- '3' on x -->
+
+                        <line x1="90" y1="248" x2="90" y2="252" stroke="#122028" /> <!-- -4 point on x -->
+                        <line x1="410" y1="248" x2="410" y2="252" stroke="#122028" /> <!-- 4 point on x -->
+                        <text x="85" y="240">-4</text> <!-- '-4' on x -->
+                        <text x="405" y="240">4</text> <!-- '4' on x -->
+
+                        <line x1="50" y1="248" x2="50" y2="252" stroke="#122028"/> <!-- -5 point on x -->
+                        <line x1="450" y1="248" x2="450" y2="252" stroke="#122028"/> <!-- 5 point on x -->
+                        <text x="45" y="240">-5</text> <!-- '-5' on x -->
+                        <text x="445" y="240">5</text> <!-- '5' on x -->
+
+
+                        <line x1="248" y1="210" x2="252" y2="210" stroke="#122028"/> <!-- 1 on y -->
+                        <line x1="248" y1="290" x2="252" y2="290" stroke="#122028"/> <!-- -1 on y -->
+                        <text x="256" y="215">1</text> <!-- 1 on y -->
+                        <text x="256" y="295">-1</text> <!-- -1 on y -->
+
+                        <line x1="248" y1="170" x2="252" y2="170" stroke="#122028"/> <!-- 2 on y -->
+                        <line x1="248" y1="330" x2="252" y2="330" stroke="#122028"/> <!-- -2 on y -->
+                        <text x="256" y="175">2</text> <!-- 2 on y -->
+                        <text x="256" y="335">-2</text> <!-- -2 on y -->
+
+                        <line x1="248" y1="130" x2="252" y2="130" stroke="#122028"/> <!-- 3 on y -->
+                        <line x1="248" y1="370" x2="252" y2="370" stroke="#122028"/> <!-- -3 on y -->
+                        <text x="256" y="135">3</text> <!-- 3 on y -->
+                        <text x="256" y="375">-3</text> <!-- -3 on y -->
+
+                        <line x1="248" y1="90" x2="252" y2="90" stroke="#122028"/> <!-- 4 on y -->
+                        <line x1="248" y1="410" x2="252" y2="410" stroke="#122028"/> <!-- -4 on y -->
+                        <text x="256" y="95">4</text> <!-- 4 on y -->
+                        <text x="256" y="415">-4</text> <!-- -4 on y -->
+
+                        <line x1="248" y1="50" x2="252" y2="50" stroke="#122028"/> <!-- 5 on y -->
+                        <line x1="248" y1="450" x2="252" y2="450" stroke="#122028"/> <!-- -5 on y -->
+                        <text x="256" y="55">5</text> <!-- 3 on y -->
+                        <text x="256" y="455">-5</text> <!-- -3 on y -->
+                        <!-- arrows -->
+                        <polygon points="250,0 255,5 245, 5" fill="#000720" stroke="#000720"/>
+                        <polygon points="500, 250 495,245 495,255" fill="#000720" stroke="#000720"/>
+
+                        <!-- Динамическая отрисовка точек -->
+                        <ui:repeat value="#{formBean.points}" var="point">
+                            <circle cx="#{250 + point.x * 40}"
+                                    cy="#{250 - point.y * 40}"
+                                    r="3.5"
+                                    fill="${point.hit ? '#11FF00FF' : 'red'}"
+                                    fill-opacity="0.9"
+                                    stroke="${point.hit ? 'green' : 'firebrick'}"/>
+                        </ui:repeat>
+
+                        <!-- Pointer -->
+                        <circle id="pointer" r="2.5" cx="#{250 + formBean.x * 40}" cy="#{250 - formBean.y * 40}" fill-opacity="0.9" fill="blue" stroke="darkblue"/>
+                    </svg>
+                </h:panelGroup>
+            </p:splitterPanel>
+        </p:splitter>
+    </div>
+    <!--    </div>-->
+
+
+    <p:panel class="flex align-items-center justify-content-center">
+        <!--    <p:panel>-->
+        <p:button value="#{msg.back_home}" outcome="index.xhtml" />
+    </p:panel>
+
+    <p:dataTable id="result-table" value="#{formBean.points}" var="point"
+                 scrollable="true" scrollHeight="250"
+                 style="margin-top:20px">
+
+        <p:column headerText="#{msg.x_label}" sortable="true">
+            <h:outputText value="#{point.x}" />
+        </p:column>
+
+        <p:column headerText="#{msg.y_label}" sortable="true">
+            <h:outputText value="#{point.y}" />
+        </p:column>
+
+        <p:column headerText="#{msg.r_label}" sortable="true">
+            <h:outputText value="#{point.r}" />
+        </p:column>
+
+        <p:column headerText="#{msg.hit}" sortable="true">
+            <h:outputText value="#{point.hit ? {msg.is_hit} : {msg.no_hit}}" />
+        </p:column>
+
+        <p:column headerText="#{msg.time}" sortable="true">
+            <h:outputText value="#{point.hitTime}">
+                <f:convertDateTime pattern="dd.MM.yyyy HH:mm:ss"/>
+            </h:outputText>
+        </p:column>
+
+    </p:dataTable>
+
+
+
+    <script type="text/javascript" src="js/fetch.js"></script>
+
+</h:body>
+
+</html>
+

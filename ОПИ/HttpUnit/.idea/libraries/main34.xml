@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main34">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/narayana/rts/lra-participant/main/lra-proxy-api-7.0.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/narayana/rts/lra-participant/main/narayana-lra-7.0.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/narayana/rts/lra-participant/main/lra-client-7.0.2.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

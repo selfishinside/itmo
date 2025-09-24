@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="microprofile-config-api-3.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/eclipse/microprofile/config/api/main/microprofile-config-api-3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

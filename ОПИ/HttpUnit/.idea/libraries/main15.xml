@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main15">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/hibernate/main/hibernate-core-6.4.4.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/hibernate/main/hibernate-envers-6.4.4.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

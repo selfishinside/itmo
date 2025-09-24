@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-saaj-api_3.0_spec-1.0.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/xml/soap/api/main/jboss-saaj-api_3.0_spec-1.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

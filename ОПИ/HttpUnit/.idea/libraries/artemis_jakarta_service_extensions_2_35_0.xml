@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="artemis-jakarta-service-extensions-2.35.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/activemq/artemis/service-extensions/main/artemis-jakarta-service-extensions-2.35.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

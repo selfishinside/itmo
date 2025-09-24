@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta.servlet-api-6.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/servlet/api/main/jakarta.servlet-api-6.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-classfilewriter-1.3.1.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/classfilewriter/main/jboss-classfilewriter-1.3.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

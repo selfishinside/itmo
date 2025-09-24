@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="main26">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/api/main/opentelemetry-instrumentation-annotations-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/api/main/opentelemetry-instrumentation-annotations-support-1.29.0-alpha.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/api/main/opentelemetry-api-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/api/main/opentelemetry-instrumentation-api-semconv-1.29.0-alpha.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/api/main/opentelemetry-instrumentation-api-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/api/main/opentelemetry-semconv-1.29.0-alpha.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/api/main/opentelemetry-api-events-1.29.0-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

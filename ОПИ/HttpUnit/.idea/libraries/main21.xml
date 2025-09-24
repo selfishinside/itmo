@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="main21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/sdk/main/opentelemetry-sdk-common-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/sdk/main/opentelemetry-sdk-logs-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/sdk/main/opentelemetry-sdk-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/sdk/main/opentelemetry-sdk-extension-autoconfigure-spi-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/sdk/main/opentelemetry-sdk-trace-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/sdk/main/opentelemetry-sdk-metrics-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/sdk/main/opentelemetry-sdk-extension-autoconfigure-1.29.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jansi-1.18">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/fusesource/jansi/main/jansi-1.18.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

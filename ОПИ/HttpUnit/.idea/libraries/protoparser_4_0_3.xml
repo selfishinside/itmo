@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="protoparser-4.0.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/squareup/protoparser/main/protoparser-4.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

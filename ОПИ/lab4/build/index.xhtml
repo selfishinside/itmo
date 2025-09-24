@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>#{msg.lab}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="webjars" name="primeflex/3.3.1/primeflex.min.css" />
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/clock-styling.css" />
+</h:head>
+
+<h:body>
+
+
+    <!-- Header -->
+    <h:panelGroup layout="block" styleClass="header-container">
+        <h1 class="header-title">#{msg.lab_title}</h1>
+        <h1>#{msg.subject} <span class="pink-header">#{msg.subject_name}</span></h1>
+        <h2 class="author-info">
+            #{msg.fio} <span class="pink-header">#{msg.name_of_person}</span>
+            #{msg.group} <span class="pink-header">#{msg.num_group}</span>
+            #{msg.variant} <span class="pink-header">#{msg.num_variant}</span>
+        </h2>
+    </h:panelGroup>
+
+    <!-- Clock -->
+    <div class="clock-container">
+        <h:panelGroup id="clockPanel" class="digital-clock flex align-items-center justify-content-center">
+            <h:outputText id="currentTime" value="#{clockBean.currentDateTime}" />
+        </h:panelGroup>
+    </div>
+    <!-- periodically update clock -->
+
+    <p:poll interval="7" update="clockPanel" />
+
+
+    <!-- Button "Start Play" -->
+    <div class="flex align-items-center justify-content-center" style="height: 100vh;">
+        <p:button value='#{msg.start}'
+                  outcome="main.xhtml"
+                  styleClass="text-4xl px-6 py-4" />
+    </div>
+
+
+</h:body>
+
+</html>
+
+

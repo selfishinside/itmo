@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hal-console-3.7.4.Final-resources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/as/console/main/hal-console-3.7.4.Final-resources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

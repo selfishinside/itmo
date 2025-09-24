@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jberet-core-2.2.1.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jberet/jberet-core/main/jberet-core-2.2.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

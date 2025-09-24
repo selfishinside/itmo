@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hibernate-search-backend-elasticsearch-7.1.1.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/hibernate/search/backend/elasticsearch/main/hibernate-search-backend-elasticsearch-7.1.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

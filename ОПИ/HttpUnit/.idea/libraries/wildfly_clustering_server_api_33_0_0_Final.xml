@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wildfly-clustering-server-api-33.0.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/clustering/server/api/main/wildfly-clustering-server-api-33.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

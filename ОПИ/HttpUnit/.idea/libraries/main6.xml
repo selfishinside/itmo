@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/hornetq/client/main/hornetq-commons-2.4.9.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/hornetq/client/main/hornetq-jakarta-client-2.4.9.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/hornetq/client/main/hornetq-core-client-2.4.9.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

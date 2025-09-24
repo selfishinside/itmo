@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main16">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/glassfish/soteria/main/jakarta.security.enterprise-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/glassfish/soteria/main/soteria.spi.bean.decorator.weld-3.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

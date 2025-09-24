@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="opentelemetry-proto-0.20.0-alpha">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/proto/main/opentelemetry-proto-0.20.0-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

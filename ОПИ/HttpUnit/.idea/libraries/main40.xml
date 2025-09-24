@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main40">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/micrometer/main/micrometer-core-1.12.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/micrometer/main/micrometer-commons-1.12.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/micrometer/main/micrometer-registry-otlp-1.12.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

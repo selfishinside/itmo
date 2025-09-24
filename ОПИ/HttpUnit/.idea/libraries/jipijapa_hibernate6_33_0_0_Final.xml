@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jipijapa-hibernate6-33.0.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/hibernate/jipijapa-hibernate6/main/jipijapa-hibernate6-33.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+"{
+    \"WFLYCTL0080: Failed services\" => {\"jboss.deployment.unit.\\\"web3.war\\\".INSTALL\" => \"WFLYSRV0153: Failed to process phase INSTALL of deployment \\\"web3.war\\\"
+    Caused by: java.lang.UnsupportedClassVersionError: Failed to link org/ruslan/FacesConfiguration (Module \\\"deployment.web3.war\\\" from Service Module Loader): org/ruslan/FacesConfiguration has been compiled by a more recent version of the Java Runtime (class file version 67.0), this version of the Java Runtime only recognizes class file versions up to 61.0\"},
+    \"WFLYCTL0412: Required services that are not installed:\" => [
+        \"jboss.deployment.unit.\\\"web3.war\\\".WeldStartService\",
+        \"jboss.deployment.unit.\\\"web3.war\\\".beanmanager\"
+    ],
+    \"WFLYCTL0180: Services with missing/unavailable dependencies\" => [
+        \"service jboss.deployment.unit.\\\"web3.war\\\".batch.artifact.factory is missing [jboss.deployment.unit.\\\"web3.war\\\".beanmanager]\",
+        \"service jboss.deployment.unit.\\\"web3.war\\\".weld.weldClassIntrospector is missing [jboss.deployment.unit.\\\"web3.war\\\".beanmanager, jboss.deployment.unit.\\\"web3.war\\\".WeldStartService]\"
+    ]
+}"

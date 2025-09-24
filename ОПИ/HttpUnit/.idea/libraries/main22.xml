@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main22">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/otlp/main/opentelemetry-exporter-otlp-common-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/otlp/main/opentelemetry-exporter-otlp-1.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/opentelemetry/otlp/main/opentelemetry-exporter-common-1.29.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

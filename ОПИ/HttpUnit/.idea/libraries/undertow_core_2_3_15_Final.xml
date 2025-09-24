@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="undertow-core-2.3.15.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/undertow/core/main/undertow-core-2.3.15.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

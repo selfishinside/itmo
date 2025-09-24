@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="xmlsec-3.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/santuario/xmlsec/main/xmlsec-3.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

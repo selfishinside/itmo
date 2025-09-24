@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta.faces-4.0.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/faces/impl/main/jakarta.faces-4.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="yasson-3.0.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/eclipse/yasson/main/yasson-3.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="main2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/fault-tolerance/main/smallrye-fault-tolerance-autoconfig-core-6.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/fault-tolerance/main/smallrye-fault-tolerance-core-6.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/fault-tolerance/main/smallrye-fault-tolerance-api-6.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/smallrye/fault-tolerance/main/smallrye-fault-tolerance-6.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="infinispan-clustered-counter-14.0.29.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/infinispan/counter/main/infinispan-clustered-counter-14.0.29.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

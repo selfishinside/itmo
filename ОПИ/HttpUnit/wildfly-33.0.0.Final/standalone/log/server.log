@@ -1,0 +1,237 @@
+2025-06-07 21:26:41,502 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.5.Final
+2025-06-07 21:26:42,468 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.5.Final
+2025-06-07 21:26:42,472 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2025-06-07 21:26:42,595 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0049: WildFly 33.0.0.Final (WildFly Core 25.0.0.Final) starting
+2025-06-07 21:26:42,597 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+	[Standalone] = 
+	apple.awt.application.name = Main
+	file.encoding = UTF-8
+	file.separator = /
+	java.awt.headless = true
+	java.class.path = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/jboss-modules.jar
+	java.class.version = 61.0
+	java.home = /Users/ruslankara-oglanov/Library/Java/JavaVirtualMachines/graalvm-jdk-17.0.8/Contents/Home
+	java.io.tmpdir = /var/folders/cw/smw_dp9x3776kqr8pgcbngfc0000gn/T/
+	java.library.path = /Users/ruslankara-oglanov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 17.0.8+7-jvmci-23.0-b15
+	java.security.manager = allow
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 17
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = GraalVM Community
+	java.vendor.url = https://www.graalvm.org/
+	java.vendor.url.bug = https://github.com/oracle/graal/issues
+	java.vendor.version = GraalVM CE 17.0.8+7.1
+	java.version = 17.0.8
+	java.version.date = 2023-07-18
+	java.vm.compressedOopsMode = Zero based
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 17
+	java.vm.vendor = GraalVM Community
+	java.vm.version = 17.0.8+7-jvmci-23.0-b15
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final
+	jboss.host.name = air-ruslan-2
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = air-ruslan-2
+	jboss.qualified.host.name = air-ruslan-2
+	jboss.server.base.dir = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone
+	jboss.server.config.dir = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/configuration
+	jboss.server.data.dir = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/data
+	jboss.server.log.dir = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/log
+	jboss.server.name = air-ruslan-2
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/tmp
+	jdk.debug = release
+	jdk.internal.vm.ci.enabled = true
+	jdk.serialFilter = maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000
+	line.separator = 
+
+	logging.configuration = file:/Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/configuration/logging.properties
+	module.path = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/modules
+	native.encoding = UTF-8
+	org.jboss.boot.log.file = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = x86_64
+	os.name = Mac OS X
+	os.version = 14.4.1
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.library.path = /Users/ruslankara-oglanov/Library/Java/JavaVirtualMachines/graalvm-jdk-17.0.8/Contents/Home/lib
+	sun.cpu.endian = little
+	sun.io.unicode.encoding = UnicodeBig
+	sun.java.command = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/jboss-modules.jar -mp /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/modules org.jboss.as.standalone -Djboss.home.dir=/Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final -Djboss.server.base.dir=/Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.stderr.encoding = UTF-8
+	sun.stdout.encoding = UTF-8
+	user.country = RU
+	user.dir = /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/bin
+	user.home = /Users/ruslankara-oglanov
+	user.language = ru
+	user.name = ruslankara-oglanov
+	user.timezone = Europe/Moscow
+2025-06-07 21:26:42,598 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:-UnlockExperimentalVMOptions -D[Standalone] -Djdk.serialFilter=maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000 -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Djava.security.manager=allow -Dorg.jboss.boot.log.file=/Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/log/server.log -Dlogging.configuration=file:/Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/configuration/logging.properties 
+2025-06-07 21:26:43,751 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.5.0.Final
+2025-06-07 21:26:45,043 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 7) WFLYDR0001: Content added at location /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/data/content/79/8983a4e332c69b06a13e6bee6aef2ca77477dc/content
+2025-06-07 21:26:45,085 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2025-06-07 21:26:45,099 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.8.16.Final
+2025-06-07 21:26:45,106 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.8.16.Final
+2025-06-07 21:26:45,151 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 65) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2025-06-07 21:26:45,150 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 55) WFLYCLINF0001: Activating Infinispan subsystem.
+2025-06-07 21:26:45,149 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2025-06-07 21:26:45,152 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 53) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2025-06-07 21:26:45,233 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2025-06-07 21:26:45,265 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2025-06-07 21:26:45,234 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 66) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2025-06-07 21:26:45,260 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 54) WFLYHEALTH0001: Activating Base Health Subsystem
+2025-06-07 21:26:45,273 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 62) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2025-06-07 21:26:45,418 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 64) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2025-06-07 21:26:45,426 INFO  [org.jboss.as.connector] (MSC service thread 1-1) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.9.Final)
+2025-06-07 21:26:45,467 INFO  [org.jboss.remoting] (MSC service thread 1-5) JBoss Remoting version 5.0.29.Final
+2025-06-07 21:26:45,485 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "app.war" (runtime-name: "app.war")
+2025-06-07 21:26:45,478 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 56) WFLYIO001: Worker 'default' has auto-configured to 16 IO threads with 128 max task threads based on your 8 available processors
+2025-06-07 21:26:45,515 INFO  [org.jboss.as.naming] (MSC service thread 1-7) WFLYNAM0003: Starting Naming Service
+2025-06-07 21:26:45,534 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 57) WFLYRS0016: RESTEasy version 6.2.9.Final
+2025-06-07 21:26:45,601 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2025-06-07 21:26:45,607 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 2.2)
+2025-06-07 21:26:45,632 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = h2
+2025-06-07 21:26:45,647 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 2.3.15.Final starting
+2025-06-07 21:26:45,927 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2025-06-07 21:26:45,927 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2025-06-07 21:26:46,078 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2025-06-07 21:26:46,079 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0012: Started server default-server.
+2025-06-07 21:26:46,079 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-7) WFLYELY00023: KeyStore file '/Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/configuration/application.keystore' does not exist. Used blank.
+2025-06-07 21:26:46,098 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) Queuing requests.
+2025-06-07 21:26:46,132 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-4) WFLYELY01084: KeyStore /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+2025-06-07 21:26:46,129 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0018: Host default-host starting
+2025-06-07 21:26:46,184 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2025-06-07 21:26:46,477 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2025-06-07 21:26:46,674 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2025-06-07 21:26:46,692 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2025-06-07 21:26:46,860 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-7) WFLYDS0013: Started FileSystemDeploymentService for directory /Users/ruslankara-oglanov/Desktop/opi/lab4/wildfly-33.0.0.Final/standalone/deployments
+2025-06-07 21:26:47,011 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBossWS 7.1.0.Final (Apache CXF 4.0.4) 
+2025-06-07 21:26:50,523 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment app.war
+2025-06-07 21:26:50,715 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-6) HV000001: Hibernate Validator 8.0.1.Final
+2025-06-07 21:26:51,192 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.7)
+2025-06-07 21:26:51,239 INFO  [org.jboss.weld.Version] (MSC service thread 1-1) WELD-000900: 5.1.2 (Final)
+2025-06-07 21:26:51,481 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = app.war_org.postgresql.Driver_42_7
+2025-06-07 21:26:52,976 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 82) HHH000412: Hibernate ORM core version 6.6.1.Final
+2025-06-07 21:26:53,193 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 82) HHH000026: Second-level cache disabled
+2025-06-07 21:26:53,296 WARN  [org.hibernate.orm.connections.pooling] (ServerService Thread Pool -- 82) HHH10001002: Using built-in connection pool (not intended for production use)
+2025-06-07 21:26:53,469 WARN  [org.hibernate.orm.deprecation] (ServerService Thread Pool -- 82) HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-07 21:26:53,545 INFO  [org.hibernate.orm.connections.pooling] (ServerService Thread Pool -- 82) HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/web]
+	Database driver: org.postgresql.Driver
+	Database version: 14.18
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-06-07 21:26:53,616 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 82) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+2025-06-07 21:26:54,423 INFO  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] (ServerService Thread Pool -- 82) HHH000490: Using JTA platform [org.hibernate.engine.transaction.jta.platform.internal.WildFlyStandAloneJtaPlatform]
+2025-06-07 21:26:54,434 INFO  [org.hibernate.orm.connections.access] (ServerService Thread Pool -- 82) HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6b318f9f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-06-07 21:26:55,023 INFO  [jakarta.enterprise.resource.webcontainer.faces.config] (ServerService Thread Pool -- 82) Initializing Mojarra 4.0.7 for context '/app'
+2025-06-07 21:26:57,194 INFO  [org.primefaces.webapp.PostConstructApplicationEventListener] (ServerService Thread Pool -- 82) Running on PrimeFaces 14.0.6
+2025-06-07 21:26:57,235 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 82) WFLYUT0021: Registered web context: '/app' for server 'default-server'
+2025-06-07 21:26:57,512 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "app.war" (runtime-name : "app.war")
+2025-06-07 21:26:57,840 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2025-06-07 21:26:57,864 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2025-06-07 21:26:57,865 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2025-06-07 21:26:57,878 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 33.0.0.Final (WildFly Core 25.0.0.Final) started in 17075ms - Started 442 of 672 services (325 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+2025-06-07 21:27:07,889 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (default task-1) HHH000026: Second-level cache disabled
+2025-06-07 21:27:07,902 WARN  [org.hibernate.orm.connections.pooling] (default task-1) HHH10001002: Using built-in connection pool (not intended for production use)
+2025-06-07 21:27:07,958 WARN  [org.hibernate.orm.deprecation] (default task-1) HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-07 21:27:07,961 INFO  [org.hibernate.orm.connections.pooling] (default task-1) HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/web]
+	Database driver: org.postgresql.Driver
+	Database version: 14.18
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-06-07 21:27:07,977 INFO  [org.hibernate.orm.beans] (default task-1) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+2025-06-07 21:27:08,107 INFO  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] (default task-1) HHH000490: Using JTA platform [org.hibernate.engine.transaction.jta.platform.internal.WildFlyStandAloneJtaPlatform]
+2025-06-07 21:27:08,109 INFO  [org.hibernate.orm.connections.access] (default task-1) HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3e0ea597] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-06-07 21:27:08,143 INFO  [org.zxc.beans.FormBean] (default task-1) formBean init...
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1) Hibernate: 
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)     select
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)         p1_0.id,
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)         p1_0.hit,
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)         p1_0.hit_time,
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)         p1_0.r,
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)         p1_0.x,
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)         p1_0.y 
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)     from
+2025-06-07 21:27:08,454 INFO  [stdout] (default task-1)         Point p1_0
+2025-06-07 21:27:08,484 INFO  [org.zxc.beans.FormBean] (default task-1) Loaded 41 points from db
+2025-06-07 21:27:08,538 INFO  [org.zxc.beans.FormBean] (default task-1) "Submit" click processing...
+2025-06-07 21:27:08,538 INFO  [org.zxc.beans.FormBean] (default task-1) got point with coords x=0.0, y=0.0, r=5.0
+2025-06-07 21:27:08,577 INFO  [stdout] (default task-1) Hibernate: 
+2025-06-07 21:27:08,579 INFO  [stdout] (default task-1)     insert 
+2025-06-07 21:27:08,579 INFO  [stdout] (default task-1)     into
+2025-06-07 21:27:08,579 INFO  [stdout] (default task-1)         Point
+2025-06-07 21:27:08,579 INFO  [stdout] (default task-1)         (hit, hit_time, r, x, y) 
+2025-06-07 21:27:08,579 INFO  [stdout] (default task-1)     values
+2025-06-07 21:27:08,579 INFO  [stdout] (default task-1)         (?, ?, ?, ?, ?) 
+2025-06-07 21:27:08,579 INFO  [stdout] (default task-1)     returning id
+2025-06-07 21:27:08,595 INFO  [stdout] (default task-1) Hibernate: 
+2025-06-07 21:27:08,595 INFO  [stdout] (default task-1)     select
+2025-06-07 21:27:08,595 INFO  [stdout] (default task-1)         p1_0.id,
+2025-06-07 21:27:08,595 INFO  [stdout] (default task-1)         p1_0.hit,
+2025-06-07 21:27:08,596 INFO  [stdout] (default task-1)         p1_0.hit_time,
+2025-06-07 21:27:08,596 INFO  [stdout] (default task-1)         p1_0.r,
+2025-06-07 21:27:08,596 INFO  [stdout] (default task-1)         p1_0.x,
+2025-06-07 21:27:08,596 INFO  [stdout] (default task-1)         p1_0.y 
+2025-06-07 21:27:08,596 INFO  [stdout] (default task-1)     from
+2025-06-07 21:27:08,596 INFO  [stdout] (default task-1)         Point p1_0
+2025-06-07 21:27:08,607 INFO  [org.zxc.beans.FormBean] (default task-1) Point added to DB
+2025-06-07 21:27:42,530 INFO  [org.zxc.beans.FormBean] (default task-2) "Submit" click processing...
+2025-06-07 21:27:42,532 INFO  [org.zxc.beans.FormBean] (default task-2) got point with coords x=0.0, y=0.0, r=5.0
+2025-06-07 21:27:42,537 INFO  [stdout] (default task-2) Hibernate: 
+2025-06-07 21:27:42,538 INFO  [stdout] (default task-2)     insert 
+2025-06-07 21:27:42,538 INFO  [stdout] (default task-2)     into
+2025-06-07 21:27:42,538 INFO  [stdout] (default task-2)         Point
+2025-06-07 21:27:42,538 INFO  [stdout] (default task-2)         (hit, hit_time, r, x, y) 
+2025-06-07 21:27:42,538 INFO  [stdout] (default task-2)     values
+2025-06-07 21:27:42,539 INFO  [stdout] (default task-2)         (?, ?, ?, ?, ?) 
+2025-06-07 21:27:42,540 INFO  [stdout] (default task-2)     returning id
+2025-06-07 21:27:42,588 INFO  [stdout] (default task-2) Hibernate: 
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)     select
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)         p1_0.id,
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)         p1_0.hit,
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)         p1_0.hit_time,
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)         p1_0.r,
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)         p1_0.x,
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)         p1_0.y 
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)     from
+2025-06-07 21:27:42,589 INFO  [stdout] (default task-2)         Point p1_0
+2025-06-07 21:27:42,604 INFO  [org.zxc.beans.FormBean] (default task-2) Point added to DB
+2025-06-07 21:27:43,314 INFO  [org.zxc.beans.FormBean] (default task-2) "Submit" click processing...
+2025-06-07 21:27:43,315 INFO  [org.zxc.beans.FormBean] (default task-2) got point with coords x=0.0, y=0.0, r=5.0
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2) Hibernate: 
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2)     insert 
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2)     into
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2)         Point
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2)         (hit, hit_time, r, x, y) 
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2)     values
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2)         (?, ?, ?, ?, ?) 
+2025-06-07 21:27:43,317 INFO  [stdout] (default task-2)     returning id
+2025-06-07 21:27:43,323 INFO  [stdout] (default task-2) Hibernate: 
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)     select
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)         p1_0.id,
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)         p1_0.hit,
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)         p1_0.hit_time,
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)         p1_0.r,
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)         p1_0.x,
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)         p1_0.y 
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)     from
+2025-06-07 21:27:43,326 INFO  [stdout] (default task-2)         Point p1_0
+2025-06-07 21:27:43,336 INFO  [org.zxc.beans.FormBean] (default task-2) Point added to DB

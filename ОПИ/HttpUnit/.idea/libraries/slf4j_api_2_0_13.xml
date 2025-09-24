@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="slf4j-api-2.0.13">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/slf4j/main/slf4j-api-2.0.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

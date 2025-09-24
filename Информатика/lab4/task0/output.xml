@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <group_name>P3107</group_name>
+  <date>Tuesday, 31 Oct 2023 UTC +03:00</date>
+  <schedule>
+    <lesson>
+      <title>Дискретная математика (базовый уровень)</title>
+      <format>Очно</format>
+      <type>Лекция</type>
+    </lesson>
+    <campus>
+      <address>Кронверский проспект д.49, Лит. А</address>
+    </campus>
+    <time>
+      <start_time>11:40</start_time>
+      <end_time>13:10</end_time>
+    </time>
+    <auditory>
+      <auditory_name>ауд. 2337</auditory_name>
+    </auditory>
+    <teacher>
+      <id>100054</id>
+      <name>Поляков Владимир Иванович</name>
+    </teacher>
+  </schedule>
+  <schedule>
+    <lesson>
+      <title>Дискретная математика (базовый уровень)</title>
+      <format>Очно</format>
+      <type>Практика</type>
+    </lesson>
+    <campus>
+      <address>Кронверский проспект д.49, Лит. А</address>
+    </campus>
+    <time>
+      <start_time>13:30</start_time>
+      <end_time>15:00</end_time>
+    </time>
+    <auditory>
+      <auditory_name>ауд. 2337</auditory_name>
+    </auditory>
+    <teacher>
+      <id>100054</id>
+      <name>Поляков Владимир Иванович</name>
+    </teacher>
+  </schedule>
+</root>

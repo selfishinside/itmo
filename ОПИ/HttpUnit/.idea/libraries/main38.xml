@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main38">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/extension/messaging-activemq/main/artemis-wildfly-integration-2.0.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/extension/messaging-activemq/main/wildfly-messaging-activemq-subsystem-33.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

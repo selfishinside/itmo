@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="main5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/activemq/artemis/client/main/artemis-jakarta-client-2.35.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/activemq/artemis/client/main/artemis-hqclient-protocol-2.35.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/activemq/artemis/client/main/artemis-core-client-2.35.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/activemq/artemis/client/main/artemis-selector-2.35.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

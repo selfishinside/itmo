@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="unstable-api-annotation-classpath-indexer-1.0.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/unstable/annotation/api/indexer/main/unstable-api-annotation-classpath-indexer-1.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

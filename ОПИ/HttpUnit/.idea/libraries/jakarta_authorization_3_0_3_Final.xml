@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta-authorization-3.0.3.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/jakarta/authorization/main/jakarta-authorization-3.0.3.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

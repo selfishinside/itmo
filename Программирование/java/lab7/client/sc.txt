@@ -1,0 +1,9 @@
+show
+history
+add
+hu
+77
+88
+999
+PLANE
+KEROSENE

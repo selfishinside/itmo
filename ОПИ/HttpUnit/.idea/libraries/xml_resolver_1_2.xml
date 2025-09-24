@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="xml-resolver-1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/xml-resolver/main/xml-resolver-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

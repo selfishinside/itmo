@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rxjava-3.1.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/reactivex/rxjava3/rxjava/main/rxjava-3.1.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

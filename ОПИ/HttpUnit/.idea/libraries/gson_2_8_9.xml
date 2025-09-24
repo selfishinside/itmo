@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gson-2.8.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/google/code/gson/main/gson-2.8.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,198 @@
+/* American-themed Styles */
+:root {
+    --dark-bg: #1E1E1E;
+    --dark-grey: #2D2D2D;
+    --light-grey: #E0E0E0;
+    --primary-text: #F5F5F5;
+    --for-r: #1E1E1E;
+    --secondary-text: #A0A0A0;
+    --accent-color: #5C9DFF;
+    --hover-color: #2F80ED;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: var(--dark-bg);
+    color: var(--primary-text);
+}
+
+.header-container {
+    background: var(--dark-grey);
+    color: var(--primary-text);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.header-title {
+    font-family: 'Verdana', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.pink-header {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.author-info {
+    background: var(--dark-grey);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid var(--hover-color);
+    margin-top: 10px;
+}
+
+.info {
+    background-color: rgba(45, 45, 45, 0.9);
+    padding: 15px;
+    border-left: 3px solid var(--accent-color);
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Table Styling */
+.ui-datatable {
+    background: var(--dark-grey) !important;
+    border: none !important;
+    color: var(--primary-text) !important;
+}
+
+.ui-datatable thead th {
+    background: var(--accent-color) !important;
+    color: var(--light-grey) !important;
+    font-family: 'Arial', sans-serif !important;
+    text-transform: uppercase;
+}
+
+.ui-datatable tbody td {
+    border-color: var(--dark-bg) !important;
+}
+
+/* Button Styling */
+.ui-button {
+    background: var(--accent-color) !important;
+    border: none !important;
+    color: var(--primary-text) !important;
+    font-family: 'Arial', sans-serif !important;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.ui-button:hover {
+    background: var(--hover-color) !important;
+    transform: translateY(-2px);
+}
+
+/* Form Elements */
+.ui-inputtext, .ui-selectonemenu {
+    border: 1px solid var(--secondary-text) !important;
+    background-color: var(--dark-grey) !important;
+    color: var(--primary-text) !important;
+}
+
+.ui-selectonemenu-label {
+    color: var(--for-r) !important;
+}
+
+/* Clock Styling */
+.clock-container {
+    background: var(--dark-grey);
+    color: var(--accent-color);
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 2px solid var(--hover-color);
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* SVG Graph Styling */
+#svg {
+    background: var(--dark-grey);
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+#svg line {
+    stroke: var(--light-grey);
+    stroke-width: 1.5;
+}
+
+#svg text {
+    fill: var(--light-grey);
+    font-family: 'Verdana', sans-serif;
+}
+
+#svg polygon, #svg rect, #svg path {
+    fill: var(--accent-color);
+    fill-opacity: 0.7;
+}
+
+
+
+
+
+/* Graph container enhancement */
+.graph-container {
+    background: var(--dark-grey);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+/* Start Button Styling */
+.start-button {
+    background: var(--accent-color) !important;
+    border: none !important;
+    color: var(--primary-text) !important;
+    font-size: 18px !important;
+    padding: 12px 24px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    background: var(--hover-color) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для ссылок h:commandLink */
+.command-link {
+    color: #00A8FF; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание */
+    font-size: 16px; /* Размер шрифта */
+    padding: 5px 10px; /* Внутренние отступы */
+    margin-right: 10px; /* Отступ справа между ссылками */
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.command-link:hover {
+    color: #004080; /* Цвет текста при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rxjava-2.2.21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/reactivex/rxjava2/rxjava/main/rxjava-2.2.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

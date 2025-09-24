@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="snappy-java-1.1.10.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/xerial/snappy/snappy-java/main/snappy-java-1.1.10.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

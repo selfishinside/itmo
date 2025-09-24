@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [],
+    "java.project.referencedLibraries": [
+        "httpd-root/fcgi-bin/lib/fastcgi-lib.jar",
+        "/Users/ruslankara-oglanov/Desktop/web/lab1/source/httpd-root/fcgi-bin/lib/fastcgi-lib.jar"
+    ]
+}

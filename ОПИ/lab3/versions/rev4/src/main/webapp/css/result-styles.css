@@ -1,0 +1,118 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Скрываем полосы прокрутки */
+    background-color: #1E1E1E; /* Тёмный фон */
+    color: #F5F5F5; /* Светлый текст */
+    font-family: Arial, sans-serif;
+}
+
+/* START BACKGROUND STYLING*/
+
+#animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2D2D2D; /* Тёмно-серый фон */
+    z-index: 0; /* Фон под контентом */
+}
+
+#bouncing-image {
+    position: absolute;
+    width: 150px; /* Размер изображения */
+    height: auto;
+}
+#content {
+    position: relative;
+    z-index: 1; /* Размещаем контент поверх фона */
+    text-align: center;
+}
+
+
+
+button {
+    background-color: #444; /* Тёмно-серый фон */
+    color: #F5F5F5; /* Светлый текст */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Закруглённые углы */
+    cursor: pointer;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #555; /* Светлее при наведении */
+    color: #FFFFFF;
+}
+
+button:active {
+    background-color: #333; /* Тёмно-серый при клике */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    background-color: #666; /* Серый для отключённых кнопок */
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* END BUTTON STYLING */
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #2D2D2D; /* Тёмный фон таблицы */
+    color: #F5F5F5; /* Светлый текст */
+    border: 1px solid #444;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+table th {
+    background-color: #3A3A3A; /* Заголовок таблицы */
+    color: #E0E0E0;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #333; /* Полосатая структура */
+}
+
+table tr:hover {
+    background-color: #444; /* При наведении */
+}
+
+/* END TABLE STYLING */
+
+/* START STYLING TEXT */
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #E0E0E0; /* Светлый текст */
+    background-color: #2D2D2D; /* Тёмный фон */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.miss {
+    color: #D9534F; /* Бледно-красный для промахов */
+}
+
+.hit {
+    color: #5CB85C; /* Мягкий зелёный для попаданий */
+}
+
+/* START STYLING TEXT */
+
+

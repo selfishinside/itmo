@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main10">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/sun/xml/messaging/saaj/main/stax-ex-2.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/sun/xml/messaging/saaj/main/saaj-impl-3.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="slf4j-jboss-logmanager-2.0.1.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/slf4j/impl/main/slf4j-jboss-logmanager-2.0.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta.transaction-api-2.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/transaction/api/main/jakarta.transaction-api-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

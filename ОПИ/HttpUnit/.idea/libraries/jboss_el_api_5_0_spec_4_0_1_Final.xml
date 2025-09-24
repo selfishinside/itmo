@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-el-api_5.0_spec-4.0.1.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/jakarta/el/api/main/jboss-el-api_5.0_spec-4.0.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

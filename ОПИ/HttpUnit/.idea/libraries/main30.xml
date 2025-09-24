@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="main30">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/google/protobuf/main/perfmark-api-0.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/google/protobuf/main/proto-google-common-protos-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/google/protobuf/main/protobuf-java-util-3.19.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/google/protobuf/main/protobuf-java-3.19.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

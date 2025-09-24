@@ -1,0 +1,264 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.2.3">
+  <diagram name="Страница — 1" id="Q1u_2qDrv1B36e760jyA">
+    <mxGraphModel dx="760" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-2" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Шибко Валерия Денисовна&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="253" y="1120" width="95" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;" parent="1" source="v8bb4bg4eRPvr83KA8x4-5" target="v8bb4bg4eRPvr83KA8x4-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-5" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Кара-Огланова Юлия Карэновна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1040" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-6" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Шибко Денис Русланович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1040" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;" parent="1" source="v8bb4bg4eRPvr83KA8x4-11" target="v8bb4bg4eRPvr83KA8x4-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-30" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="v8bb4bg4eRPvr83KA8x4-29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="980" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-11" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Гачко Алла Андреевна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="170" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="v8bb4bg4eRPvr83KA8x4-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="1060" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-12" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Кара-Огланов Карэн Тимурович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="309" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;" parent="1" source="v8bb4bg4eRPvr83KA8x4-13" target="v8bb4bg4eRPvr83KA8x4-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="v8bb4bg4eRPvr83KA8x4-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="980" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-13" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Шибко Ирина Алексеевна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="430" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="v8bb4bg4eRPvr83KA8x4-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="980" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="v8bb4bg4eRPvr83KA8x4-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="980" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-14" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Руслан &lt;/font&gt;Шибко Дмитриевич&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="570" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-24" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Шибко Евгений Русланович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="560" y="1040" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-29" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Гачко Валерия Карэновна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="180" y="1040" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-31" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Гачко Зинаида Андреевна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="v8bb4bg4eRPvr83KA8x4-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="900" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="100" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-32" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Гачко Андрей Валерьевич&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="110" y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-33" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Кара-Огланов Тимур Арсэнович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="210" y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="v8bb4bg4eRPvr83KA8x4-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="900" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-34" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Маркарян Карина Арсэновна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="319" y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-35" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Приходько Алексей Степанович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="430" y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="960" as="targetPoint" />
+            <mxPoint x="530" y="900" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-36" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Приходько Варвара Николаевна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="540" y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="v8bb4bg4eRPvr83KA8x4-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="900" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="740" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-37" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Шибко Дмитрий Васильевич&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="640" y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v8bb4bg4eRPvr83KA8x4-38" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Шибко Наталья Степановна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="751" y="880" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="v8bb4bg4eRPvr83KA8x4-31" target="v8bb4bg4eRPvr83KA8x4-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="890" as="sourcePoint" />
+            <mxPoint x="129" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="v8bb4bg4eRPvr83KA8x4-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="900" as="sourcePoint" />
+            <mxPoint x="320" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=link;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="900" as="sourcePoint" />
+            <mxPoint x="540" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="v8bb4bg4eRPvr83KA8x4-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-13" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Кара-Огланов Руслан Денисович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="372" y="1120" width="95" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-14" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Шибко София Денисовна&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1120" width="95" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="1060" as="sourcePoint" />
+            <mxPoint x="410" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="1060" as="sourcePoint" />
+            <mxPoint x="450" y="1170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-17" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Шибко Арина Дмитриевна&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="760" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="1010" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="740" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="980" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-19" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Кудияш Егор Михайлович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="905" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="onl3FGANGckJhbrFkhwx-17" target="onl3FGANGckJhbrFkhwx-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="870" y="970" as="sourcePoint" />
+            <mxPoint x="890" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-46" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="1040" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-23" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Кудияш Алена Егоровна&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="830" y="1020" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-25" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Альфредо Глеб Джованелли&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1020" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="onl3FGANGckJhbrFkhwx-23" target="onl3FGANGckJhbrFkhwx-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="1030" as="sourcePoint" />
+            <mxPoint x="980" y="1030" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="955" y="900" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-29" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Кудияш Михаил Александрович&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="850" y="880" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-30" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Кудияш Лариса Андреевна&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="960" y="880" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="950" y="900" as="sourcePoint" />
+            <mxPoint x="960" y="900" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-35" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Альфредо Джованни Моретти&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="980" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-36" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Альфредо Белла Валентини&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="960" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1140" y="980" as="sourcePoint" />
+            <mxPoint x="1195" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-43" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Альфредо Артем Глебович&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1080" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-44" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Альфредо Аврора Глебовна&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1080" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-45" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;Альфредо Роман Глебович&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1080" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-47" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="1040" as="sourcePoint" />
+            <mxPoint x="1020" y="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onl3FGANGckJhbrFkhwx-49" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="onl3FGANGckJhbrFkhwx-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="1040" as="sourcePoint" />
+            <mxPoint x="1030" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

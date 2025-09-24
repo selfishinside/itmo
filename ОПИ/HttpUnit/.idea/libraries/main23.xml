@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="main23">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/fasterxml/jackson/jakarta/jackson-jakarta-json-provider/main/jackson-jakarta-rs-base-2.15.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/fasterxml/jackson/jakarta/jackson-jakarta-json-provider/main/jackson-jakarta-rs-json-provider-2.15.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/com/fasterxml/jackson/jakarta/jackson-jakarta-json-provider/main/jackson-module-jakarta-xmlbind-annotations-2.15.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

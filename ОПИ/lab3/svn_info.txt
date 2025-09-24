@@ -1,0 +1,11 @@
+Path: lab3_svn
+URL: file:///Users/ruslankara-oglanov/Desktop/opi/lab3/lab3_svn
+Relative URL: ^/
+Repository Root: file:///Users/ruslankara-oglanov/Desktop/opi/lab3/lab3_svn
+Repository UUID: 9763b4ff-bf7c-4231-bdd8-da8b09315096
+Revision: 4
+Node Kind: directory
+Last Changed Author: ruslankara-oglanov
+Last Changed Rev: 4
+Last Changed Date: 2025-05-25 22:38:18 +0300 (вс, 25 май 2025)
+

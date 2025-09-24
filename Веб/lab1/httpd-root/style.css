@@ -1,0 +1,151 @@
+/* Шрифт и основные стили */
+body {
+    background-color: #1C1B29;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.header h1 { /* пример каскадирования */
+    font-size: 50px;
+    color: #E0E0FF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+}
+
+.header h3 {
+    color: #E0E0FF; 
+    font-size: 22px;
+    color: #D6BFFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+}
+
+/* Стили для таблицы */
+#resultsTable {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#resultsTable th, #resultsTable td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    font-size: 18px;
+    background-color: #2B2236;
+}
+
+#resultsTable th {
+    background-color: #3E3156;
+    font-weight: bold;
+}
+
+#resultsTable tr:last-child td {
+    border-bottom: none;
+}
+
+/* Стили для кнопок и полей ввода */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #A29BFE, #6C5CE7);
+}
+
+button:focus {
+    outline: 2px solid #6C5CE7;
+}
+
+/* Центрирование основного контейнера */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 30px;
+    color: #E0E0FF;
+}
+
+.results {
+    color: #E0E0FF;
+}
+.headerOfTable {
+    color: #E0E0FF;
+}
+
+
+/* Контейнеры для X и R чекбоксов */
+.horizontal-checkboxes, #xCheckboxes, #rCheckboxes {
+    color: #E0E0FF;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Стили для меток и текста под чекбоксами */
+.horizontal-checkboxes label,
+#xCheckboxes label,
+#rCheckboxes label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    text-align: center;
+}
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #A29BFE;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 5px;
+    background-color: #1C1B29;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #A29BFE;
+}
+
+input[type="checkbox"]:checked::before { /* cелектор атрибута*/
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: -2px;
+    left: 4px;
+}
+
+/* Стили для текста */
+
+
+#resultsTable tr.in-answer-row td {
+    color: #A29BFE; 
+}
+
+#resultsTable tr.out-answer-row td {
+    color: red; 
+}
+

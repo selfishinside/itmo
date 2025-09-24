@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jctools-core-4.0.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jctools/main/jctools-core-4.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

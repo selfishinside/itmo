@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="main19">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/httpcomponents/core/main/httpcore-4.4.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/apache/httpcomponents/core/main/httpclient-4.5.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

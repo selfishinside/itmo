@@ -1,0 +1,72 @@
+<component name="libraryTable">
+  <library name="main46">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-json-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-auth-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-basic-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-mechanism-scram-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-form-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-x500-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-localuser-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-ssh-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-x500-cert-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-digest-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-mechanism-oauth2-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-client-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-asn1-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-provider-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-spnego-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-auth-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-gs2-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-mechanism-digest-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-credential-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-ssl-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-security-manager-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-scram-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-realm-token-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-x500-cert-acme-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-realm-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-base-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-otp-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-bearer-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-credential-source-impl-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-auth-server-sasl-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-gssapi-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-anonymous-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-external-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-x500-principal-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-auth-server-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-auth-server-http-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-auth-server-deprecated-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-digest-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-cert-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-x500-cert-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-external-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-credential-store-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-dynamic-ssl-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-oauth2-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-keystore-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-mechanism-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-security-manager-action-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-permission-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-mechanism-http-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-mechanism-gssapi-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-password-impl-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-plain-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-audit-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-sasl-entity-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-encryption-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-auth-util-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-realm-ldap-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-digest-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-http-sso-2.5.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/security/elytron-base/main/wildfly-elytron-realm-jdbc-2.5.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

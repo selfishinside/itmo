@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wildfly-common-1.7.0.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/wildfly/common/main/wildfly-common-1.7.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

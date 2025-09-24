@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="weld-spi-5.0.SP3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/weld/spi/main/weld-spi-5.0.SP3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

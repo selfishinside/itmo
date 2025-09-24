@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jose4j-0.9.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/bitbucket/jose4j/main/jose4j-0.9.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

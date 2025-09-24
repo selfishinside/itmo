@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-iiop-client-2.0.1.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/iiop-client/main/jboss-iiop-client-2.0.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

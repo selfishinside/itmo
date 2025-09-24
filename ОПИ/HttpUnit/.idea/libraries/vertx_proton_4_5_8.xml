@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vertx-proton-4.5.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/io/vertx/proton/main/vertx-proton-4.5.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

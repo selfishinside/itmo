@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="resteasy-core-spi-6.2.9.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wildfly-33.0.0.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-core-spi/main/resteasy-core-spi-6.2.9.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
