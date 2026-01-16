@@ -1,1 +1,0 @@
-/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/tcl-tk/lib -fsanitize=address CMakeFiles/gen_int_file.dir/gen_int_file.c.o -o gen_int_file

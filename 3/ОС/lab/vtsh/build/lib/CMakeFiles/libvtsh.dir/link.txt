@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblibvtsh.a CMakeFiles/libvtsh.dir/vtsh.c.o CMakeFiles/libvtsh.dir/ema_sort.c.o
-/usr/bin/ranlib liblibvtsh.a

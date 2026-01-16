@@ -1,2 +1,0 @@
-/usr/bin/ar qc libvt.a CMakeFiles/vt.dir/cmp_file.cpp.o CMakeFiles/vt.dir/exception.cpp.o CMakeFiles/vt.dir/file.cpp.o CMakeFiles/vt.dir/log_file.cpp.o
-/usr/bin/ranlib libvt.a

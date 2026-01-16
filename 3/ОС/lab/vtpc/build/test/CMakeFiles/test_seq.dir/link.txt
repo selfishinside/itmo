@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/tcl-tk/lib CMakeFiles/test_seq.dir/test_seq.cpp.o -o test_seq  lib/libvt.a ../lib/libvtpc.a

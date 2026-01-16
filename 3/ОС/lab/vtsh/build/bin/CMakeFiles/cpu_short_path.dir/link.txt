@@ -1,1 +1,0 @@
-/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/tcl-tk/lib -fsanitize=address CMakeFiles/cpu_short_path.dir/cpu_short_path.c.o -o cpu-short-path
