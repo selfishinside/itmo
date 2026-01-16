@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/vtpc_lib",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/. -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -std=c99 -o CMakeFiles/vtpc.dir/vtpc.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/vtpc.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/vtpc.c",
+  "output": "vtpc_lib/CMakeFiles/vtpc.dir/vtpc.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/lib",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/../../../vtpc/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/. -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -Wpedantic -o CMakeFiles/libvtsh.dir/vtsh.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/vtsh.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/vtsh.c",
+  "output": "lib/CMakeFiles/libvtsh.dir/vtsh.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/lib",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/../../../vtpc/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/. -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -Wpedantic -o CMakeFiles/libvtsh.dir/ema_sort.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/ema_sort.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/ema_sort.c",
+  "output": "lib/CMakeFiles/libvtsh.dir/ema_sort.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/../../../vtpc/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/. -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/vtsh_main.dir/main.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/main.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/main.c",
+  "output": "bin/CMakeFiles/vtsh_main.dir/main.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -O0 -o CMakeFiles/cpu_mat_mul.dir/cpu_mat_mul.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/cpu_mat_mul.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/cpu_mat_mul.c",
+  "output": "bin/CMakeFiles/cpu_mat_mul.dir/cpu_mat_mul.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/gen_int_file.dir/gen_int_file.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/gen_int_file.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/gen_int_file.c",
+  "output": "bin/CMakeFiles/gen_int_file.dir/gen_int_file.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/lib/../../../vtpc/lib -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/. -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/ema_sort_int.dir/ema_sort_int.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/ema_sort_int.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/ema_sort_int.c",
+  "output": "bin/CMakeFiles/ema_sort_int.dir/ema_sort_int.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/shell_seq.dir/shell_seq.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/shell_seq.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/shell_seq.c",
+  "output": "bin/CMakeFiles/shell_seq.dir/shell_seq.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/proc_vfork.dir/proc_vfork.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/proc_vfork.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/proc_vfork.c",
+  "output": "bin/CMakeFiles/proc_vfork.dir/proc_vfork.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/cpu_short_path.dir/cpu_short_path.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/cpu_short_path.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/cpu_short_path.c",
+  "output": "bin/CMakeFiles/cpu_short_path.dir/cpu_short_path.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/. -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/vtpc_test.dir/vtpc_test.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/vtpc_test.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/vtpc_test.c",
+  "output": "bin/CMakeFiles/vtpc_test.dir/vtpc_test.c.o"
+},
+{
+  "directory": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/build/bin",
+  "command": "/usr/bin/cc  -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin -I/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtpc/lib/. -std=gnu17 -arch arm64 -Wall -Wextra -Werror -fsanitize=address -o CMakeFiles/benchmark.dir/benchmark.c.o -c /Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/benchmark.c",
+  "file": "/Users/ruslankara-oglanov/Desktop/itmo/3/ОС/lab/vtsh/bin/benchmark.c",
+  "output": "bin/CMakeFiles/benchmark.dir/benchmark.c.o"
+}
+]

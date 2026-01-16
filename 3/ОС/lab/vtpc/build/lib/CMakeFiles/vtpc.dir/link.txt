@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvtpc.a CMakeFiles/vtpc.dir/vtpc.c.o
+/usr/bin/ranlib libvtpc.a
