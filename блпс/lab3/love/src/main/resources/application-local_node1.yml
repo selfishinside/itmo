@@ -1,0 +1,16 @@
+Spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hotel_booking
+    username: postgres
+    password: password
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 9167

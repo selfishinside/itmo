@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: classpath:application-prod.yml
+
+server:
+  port: 9167
+
+app:
+  node-id: node-1
