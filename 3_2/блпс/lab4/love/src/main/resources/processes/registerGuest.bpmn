@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:definitions xmlns:ns0="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns1="http://camunda.org/schema/1.0/bpmn" xmlns:ns2="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ns3="http://www.omg.org/spec/DD/20100524/DC" xmlns:ns4="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_registerGuest" targetNamespace="https://itmo.ru/blps/lab4" exporter="Camunda Modeler" exporterVersion="5.28.0">
+  <ns0:process id="registerGuest" name="Регистрация гостя" isExecutable="true" ns1:historyTimeToLive="30" ns1:candidateStarterGroups="ROLE_ADMINISTRATOR">
+    <ns0:startEvent id="start" name="Регистрация гостя">
+      <ns0:extensionElements>
+        <ns1:formData>
+          <ns1:formField id="firstName" label="Имя" type="string">
+            <ns1:validation>
+              <ns1:constraint name="required" />
+            </ns1:validation>
+          </ns1:formField>
+          <ns1:formField id="lastName" label="Фамилия" type="string">
+            <ns1:validation>
+              <ns1:constraint name="required" />
+            </ns1:validation>
+          </ns1:formField>
+          <ns1:formField id="email" label="Email" type="string">
+            <ns1:validation>
+              <ns1:constraint name="required" />
+            </ns1:validation>
+          </ns1:formField>
+          <ns1:formField id="phone" label="phone" type="string">
+            <ns1:validation>
+              <ns1:constraint name="required" />
+            </ns1:validation>
+          </ns1:formField>
+          <ns1:formField id="nationality" label="nationality" type="string">
+            <ns1:validation>
+              <ns1:constraint name="required" />
+            </ns1:validation>
+          </ns1:formField>
+          <ns1:formField id="passportNumber" label="passportNumber" type="string">
+            <ns1:validation>
+              <ns1:constraint name="required" />
+            </ns1:validation>
+          </ns1:formField>
+          <ns1:formField id="birthDate" label="birthDate" type="string">
+            <ns1:validation>
+              <ns1:constraint name="required" />
+            </ns1:validation>
+          </ns1:formField>
+          <ns1:formField id="address" label="address" type="string" />
+          <ns1:formField id="city" label="city" type="string" />
+          <ns1:formField id="postalCode" label="postalCode" type="string" />
+          <ns1:formField id="country" label="country" type="string" />
+        </ns1:formData>
+      </ns0:extensionElements>
+    </ns0:startEvent>
+    <ns0:serviceTask id="saveGuest" name="Регистрация гостя" ns1:type="external" ns1:topic="saveGuest" />
+    <ns0:endEvent id="end" name="Готово" />
+    <ns0:sequenceFlow id="flow_start_saveGuest" sourceRef="start" targetRef="saveGuest" />
+    <ns0:sequenceFlow id="flow_saveGuest_end" sourceRef="saveGuest" targetRef="end" />
+  </ns0:process>
+  <ns2:BPMNDiagram id="Diagram_registerGuest">
+    <ns2:BPMNPlane id="Plane_registerGuest" bpmnElement="registerGuest">
+      <ns2:BPMNShape id="start_di" bpmnElement="start">
+        <ns3:Bounds x="80" y="100" width="36" height="36" />
+      </ns2:BPMNShape>
+      <ns2:BPMNShape id="saveGuest_di" bpmnElement="saveGuest">
+        <ns3:Bounds x="320" y="100" width="160" height="80" />
+      </ns2:BPMNShape>
+      <ns2:BPMNShape id="end_di" bpmnElement="end">
+        <ns3:Bounds x="560" y="100" width="36" height="36" />
+      </ns2:BPMNShape>
+      <ns2:BPMNEdge id="flow_start_saveGuest_di" bpmnElement="flow_start_saveGuest">
+        <ns4:waypoint x="116" y="118.0" />
+        <ns4:waypoint x="320" y="140.0" />
+      </ns2:BPMNEdge>
+      <ns2:BPMNEdge id="flow_saveGuest_end_di" bpmnElement="flow_saveGuest_end">
+        <ns4:waypoint x="480" y="140.0" />
+        <ns4:waypoint x="560" y="118.0" />
+      </ns2:BPMNEdge>
+    </ns2:BPMNPlane>
+  </ns2:BPMNDiagram>
+</ns0:definitions>

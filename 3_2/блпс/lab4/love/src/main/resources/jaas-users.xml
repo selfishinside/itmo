@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user username="administrator" password="admin123">
+        <role>ROLE_ADMINISTRATOR</role>
+    </user>
+
+    <user username="hotel_manager" password="hotel123">
+        <role>ROLE_HOTEL_MANAGER</role>
+    </user>
+
+    <user username="user" password="user123">
+        <role>ROLE_USER</role>
+    </user>
+
+    <user username="guest" password="guest123">
+        <role>ROLE_GUEST</role>
+    </user>
+</users>
+

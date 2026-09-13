@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_hotelBooking" targetNamespace="https://itmo.ru/blps/lab4" exporter="Camunda Modeler" exporterVersion="5.28.0">
+  <bpmn:process id="hotelBooking" name="Бронирование отеля" isExecutable="true" camunda:historyTimeToLive="30" camunda:candidateStarterGroups="ROLE_GUEST,ROLE_USER,ROLE_ADMINISTRATOR">
+    <bpmn:startEvent id="start" name="Заявка" camunda:initiator="initiator">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="roomId" label="ID номера" type="long">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="guestId" label="ID гостя" type="long">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="checkInDate" label="Заезд (YYYY-MM-DD)" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="checkOutDate" label="Выезд (YYYY-MM-DD)" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="numberOfGuests" label="Количество гостей" type="long">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="cardNumber" label="Последние 4 цифры карты" type="string" />
+          <camunda:formField id="cardHolder" label="Держатель карты" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="createBooking" name="Проверить и создать бронь" camunda:type="external" camunda:topic="createBooking" />
+    <bpmn:userTask id="payment" name="Подтвердить оплату" camunda:candidateGroups="ROLE_USER,ROLE_ADMINISTRATOR">
+      <bpmn:extensionElements>
+        <camunda:formData />
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+    <bpmn:boundaryEvent id="paymentTimeout" name="Срок истёк" attachedToRef="payment" cancelActivity="true">
+      <bpmn:timerEventDefinition>
+        <bpmn:timeDuration>PT1M</bpmn:timeDuration>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:serviceTask id="expirePayment" name="Отменить неоплаченную бронь" camunda:type="external" camunda:topic="expirePayment" />
+    <bpmn:endEvent id="expired" name="Оплата просрочена" />
+    <bpmn:serviceTask id="recordPayment" name="Зафиксировать оплату" camunda:type="external" camunda:topic="recordPayment" />
+    <bpmn:userTask id="hotelConfirmation" name="Подтвердить отелем" camunda:candidateGroups="ROLE_HOTEL_MANAGER,ROLE_ADMINISTRATOR">
+      <bpmn:extensionElements>
+        <camunda:formData />
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="confirmBooking" name="Подтвердить и оповестить Kafka" camunda:type="external" camunda:topic="confirmBooking" />
+    <bpmn:userTask id="cancellationRequest" name="Запросить отмену до заезда" camunda:candidateGroups="ROLE_GUEST,ROLE_USER,ROLE_ADMINISTRATOR">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="reason" label="Причина отмены" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+    <bpmn:boundaryEvent id="checkout" name="Срок истёк" attachedToRef="cancellationRequest" cancelActivity="true">
+      <bpmn:timerEventDefinition>
+        <bpmn:timeDate>${checkoutAt}</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:serviceTask id="completeStay" name="Завершить проживание" camunda:type="external" camunda:topic="completeStay" />
+    <bpmn:endEvent id="completed" name="Проживание завершено" />
+    <bpmn:serviceTask id="requestCancellation" name="Зарегистрировать запрос отмены" camunda:type="external" camunda:topic="requestCancellation" />
+    <bpmn:userTask id="cancellationDecision" name="Решение отеля по отмене" camunda:candidateGroups="ROLE_HOTEL_MANAGER,ROLE_ADMINISTRATOR">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="approved" label="Разрешить отмену" type="boolean">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="reason" label="Комментарий отеля" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="decision" name="Отмена одобрена?" />
+    <bpmn:serviceTask id="approveCancellation" name="Отменить и освободить номер" camunda:type="external" camunda:topic="approveCancellation" />
+    <bpmn:serviceTask id="rejectCancellation" name="Вернуть подтверждённую бронь" camunda:type="external" camunda:topic="rejectCancellation" />
+    <bpmn:endEvent id="cancelled" name="Бронь отменена" />
+    <bpmn:sequenceFlow id="flow_start_createBooking" sourceRef="start" targetRef="createBooking" />
+    <bpmn:sequenceFlow id="flow_createBooking_payment" sourceRef="createBooking" targetRef="payment" />
+    <bpmn:sequenceFlow id="flow_payment_recordPayment" sourceRef="payment" targetRef="recordPayment" />
+    <bpmn:sequenceFlow id="flow_paymentTimeout_expirePayment" sourceRef="paymentTimeout" targetRef="expirePayment" />
+    <bpmn:sequenceFlow id="flow_expirePayment_expired" sourceRef="expirePayment" targetRef="expired" />
+    <bpmn:sequenceFlow id="flow_recordPayment_hotelConfirmation" sourceRef="recordPayment" targetRef="hotelConfirmation" />
+    <bpmn:sequenceFlow id="flow_hotelConfirmation_confirmBooking" sourceRef="hotelConfirmation" targetRef="confirmBooking" />
+    <bpmn:sequenceFlow id="flow_confirmBooking_cancellationRequest" sourceRef="confirmBooking" targetRef="cancellationRequest" />
+    <bpmn:sequenceFlow id="flow_checkout_completeStay" sourceRef="checkout" targetRef="completeStay" />
+    <bpmn:sequenceFlow id="flow_completeStay_completed" sourceRef="completeStay" targetRef="completed" />
+    <bpmn:sequenceFlow id="flow_cancellationRequest_requestCancellation" sourceRef="cancellationRequest" targetRef="requestCancellation" />
+    <bpmn:sequenceFlow id="flow_requestCancellation_cancellationDecision" sourceRef="requestCancellation" targetRef="cancellationDecision" />
+    <bpmn:sequenceFlow id="flow_cancellationDecision_decision" sourceRef="cancellationDecision" targetRef="decision" />
+    <bpmn:sequenceFlow id="flow_approveCancellation_cancelled" sourceRef="approveCancellation" targetRef="cancelled" />
+    <bpmn:sequenceFlow id="flow_rejectCancellation_cancellationRequest" sourceRef="rejectCancellation" targetRef="cancellationRequest" />
+    <bpmn:sequenceFlow id="flow_decision_approveCancellation" sourceRef="decision" targetRef="approveCancellation">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${approved == true}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="flow_decision_rejectCancellation" sourceRef="decision" targetRef="rejectCancellation">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${approved == false}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_hotelBooking">
+    <bpmndi:BPMNPlane id="Plane_hotelBooking" bpmnElement="hotelBooking">
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="100" y="110" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="createBooking_di" bpmnElement="createBooking">
+        <dc:Bounds x="220" y="90" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="payment_di" bpmnElement="payment">
+        <dc:Bounds x="460" y="90" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="paymentTimeout_di" bpmnElement="paymentTimeout">
+        <dc:Bounds x="520" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="expirePayment_di" bpmnElement="expirePayment">
+        <dc:Bounds x="460" y="300" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="expired_di" bpmnElement="expired">
+        <dc:Bounds x="740" y="320" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="recordPayment_di" bpmnElement="recordPayment">
+        <dc:Bounds x="700" y="90" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="hotelConfirmation_di" bpmnElement="hotelConfirmation">
+        <dc:Bounds x="940" y="90" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="confirmBooking_di" bpmnElement="confirmBooking">
+        <dc:Bounds x="1180" y="90" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="cancellationRequest_di" bpmnElement="cancellationRequest">
+        <dc:Bounds x="1450" y="90" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="checkout_di" bpmnElement="checkout">
+        <dc:Bounds x="1530" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="completeStay_di" bpmnElement="completeStay">
+        <dc:Bounds x="1760" y="300" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="completed_di" bpmnElement="completed">
+        <dc:Bounds x="2020" y="320" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="requestCancellation_di" bpmnElement="requestCancellation">
+        <dc:Bounds x="1450" y="520" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="cancellationDecision_di" bpmnElement="cancellationDecision">
+        <dc:Bounds x="1200" y="520" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="decision_di" bpmnElement="decision">
+        <dc:Bounds x="1000" y="535" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="approveCancellation_di" bpmnElement="approveCancellation">
+        <dc:Bounds x="700" y="520" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="rejectCancellation_di" bpmnElement="rejectCancellation">
+        <dc:Bounds x="1000" y="300" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="cancelled_di" bpmnElement="cancelled">
+        <dc:Bounds x="460" y="542" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="flow_start_createBooking_di" bpmnElement="flow_start_createBooking">
+        <di:waypoint x="136" y="128.0" />
+        <di:waypoint x="220" y="130.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_createBooking_payment_di" bpmnElement="flow_createBooking_payment">
+        <di:waypoint x="380" y="130.0" />
+        <di:waypoint x="460" y="130.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_payment_recordPayment_di" bpmnElement="flow_payment_recordPayment">
+        <di:waypoint x="620" y="130.0" />
+        <di:waypoint x="700" y="130.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_paymentTimeout_expirePayment_di" bpmnElement="flow_paymentTimeout_expirePayment">
+        <di:waypoint x="538.0" y="188" />
+        <di:waypoint x="538.0" y="300" />
+        <di:waypoint x="540.0" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_expirePayment_expired_di" bpmnElement="flow_expirePayment_expired">
+        <di:waypoint x="620" y="340.0" />
+        <di:waypoint x="740" y="338.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_recordPayment_hotelConfirmation_di" bpmnElement="flow_recordPayment_hotelConfirmation">
+        <di:waypoint x="860" y="130.0" />
+        <di:waypoint x="940" y="130.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_hotelConfirmation_confirmBooking_di" bpmnElement="flow_hotelConfirmation_confirmBooking">
+        <di:waypoint x="1100" y="130.0" />
+        <di:waypoint x="1180" y="130.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_confirmBooking_cancellationRequest_di" bpmnElement="flow_confirmBooking_cancellationRequest">
+        <di:waypoint x="1340" y="130.0" />
+        <di:waypoint x="1450" y="130.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_checkout_completeStay_di" bpmnElement="flow_checkout_completeStay">
+        <di:waypoint x="1548.0" y="188" />
+        <di:waypoint x="1548.0" y="340.0" />
+        <di:waypoint x="1760" y="340.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_completeStay_completed_di" bpmnElement="flow_completeStay_completed">
+        <di:waypoint x="1920" y="340.0" />
+        <di:waypoint x="2020" y="338.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_cancellationRequest_requestCancellation_di" bpmnElement="flow_cancellationRequest_requestCancellation">
+        <di:waypoint x="1530.0" y="170" />
+        <di:waypoint x="1530.0" y="520" />
+        <di:waypoint x="1530.0" y="520" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_requestCancellation_cancellationDecision_di" bpmnElement="flow_requestCancellation_cancellationDecision">
+        <di:waypoint x="1450" y="560.0" />
+        <di:waypoint x="1360" y="560.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_cancellationDecision_decision_di" bpmnElement="flow_cancellationDecision_decision">
+        <di:waypoint x="1200" y="560.0" />
+        <di:waypoint x="1050" y="560.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_approveCancellation_cancelled_di" bpmnElement="flow_approveCancellation_cancelled">
+        <di:waypoint x="700" y="560.0" />
+        <di:waypoint x="496" y="560.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_rejectCancellation_cancellationRequest_di" bpmnElement="flow_rejectCancellation_cancellationRequest">
+        <di:waypoint x="1160" y="340.0" />
+        <di:waypoint x="1530" y="340.0" />
+        <di:waypoint x="1530" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_decision_approveCancellation_di" bpmnElement="flow_decision_approveCancellation">
+        <di:waypoint x="1000" y="560.0" />
+        <di:waypoint x="860" y="560.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_decision_rejectCancellation_di" bpmnElement="flow_decision_rejectCancellation">
+        <di:waypoint x="1025.0" y="535" />
+        <di:waypoint x="1025.0" y="380" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

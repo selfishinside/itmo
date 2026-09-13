@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_ratingUpdate" targetNamespace="https://itmo.ru/blps/lab4" exporter="Camunda Modeler" exporterVersion="5.28.0">
+  <bpmn:process id="ratingUpdate" name="Пересчитать рейтинги" isExecutable="true" camunda:historyTimeToLive="30" camunda:candidateStarterGroups="ROLE_ADMINISTRATOR">
+    <bpmn:startEvent id="start" name="Пересчитать рейтинги">
+      <bpmn:extensionElements>
+        <camunda:formData />
+      </bpmn:extensionElements>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="updateRatings" name="Пересчитать рейтинги" camunda:type="external" camunda:topic="updateRatings" />
+    <bpmn:endEvent id="end" name="Готово" />
+    <bpmn:sequenceFlow id="flow_start_updateRatings" sourceRef="start" targetRef="updateRatings" />
+    <bpmn:sequenceFlow id="flow_updateRatings_end" sourceRef="updateRatings" targetRef="end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_ratingUpdate">
+    <bpmndi:BPMNPlane id="Plane_ratingUpdate" bpmnElement="ratingUpdate">
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="80" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="updateRatings_di" bpmnElement="updateRatings">
+        <dc:Bounds x="320" y="100" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_di" bpmnElement="end">
+        <dc:Bounds x="560" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="flow_start_updateRatings_di" bpmnElement="flow_start_updateRatings">
+        <di:waypoint x="116" y="118.0" />
+        <di:waypoint x="320" y="140.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_updateRatings_end_di" bpmnElement="flow_updateRatings_end">
+        <di:waypoint x="480" y="140.0" />
+        <di:waypoint x="560" y="118.0" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>БЛПС 4 — бронирование</title>
+<style>body{font:17px system-ui;max-width:1000px;margin:40px auto;padding:0 24px;color:#14283f;background:#f4f7fb}h1{font-size:30px}section{background:white;border:1px solid #dce3ec;border-radius:12px;padding:24px;margin:20px 0}button{padding:10px 16px;margin:6px;border:0;border-radius:6px;background:#194daf;color:white;cursor:pointer}label{display:block;margin:16px 0 6px}input,select{padding:10px;border:1px solid #a3b2c5;border-radius:5px;max-width:95%}.help-block{display:none}pre{white-space:pre-wrap}#status{padding:12px}a{color:#194daf}</style>
+<h1>Бронирование отелей</h1><p>Лабораторная №4 · Camunda BPM</p>
+<section><h2>Начать процесс</h2><div id="processes"></div></section>
+<section><h2>Доступные задачи</h2><button id="refresh">Обновить</button><div id="tasks"></div></section>
+<section id="formPanel" hidden><h2 id="formTitle"></h2><div id="form"></div><button id="submit">Отправить</button></section>
+<pre id="status" role="status"></pre>
+<script>
+const api='api/v1/workflow';let destination;
+async function request(path,options={}){const response=await fetch(api+path,options);if(!response.ok)throw new Error(await response.text());return response.headers.get('content-type')?.includes('text/html')?response.text():response.json()}
+function status(text){document.querySelector('#status').textContent=text}
+function button(label,action){const b=document.createElement('button');b.textContent=label;b.onclick=()=>action().catch(e=>status(e.message));return b}
+async function showForm(path,label){destination=path;document.querySelector('#formTitle').textContent=label;document.querySelector('#form').innerHTML=await request(path+'/form');document.querySelector('#formPanel').hidden=false;document.querySelectorAll('[cam-variable-type="Boolean"]').forEach(el=>el.removeAttribute('required'))}
+async function refresh(){const [processes,tasks]=await Promise.all([request('/processes'),request('/tasks')]);const p=document.querySelector('#processes');p.replaceChildren();processes.forEach(x=>p.append(button(x.name,()=>showForm('/processes/'+x.key,x.name))));const t=document.querySelector('#tasks');t.replaceChildren();if(!tasks.length)t.textContent='Нет доступных задач';tasks.forEach(x=>t.append(button(x.name+' · бронь '+x.bookingId,()=>showForm('/tasks/'+x.id,x.name))))}
+document.querySelector('#submit').onclick=async()=>{try{const values={};for(const el of document.querySelectorAll('#form [cam-variable-name]')){if(!el.checkValidity()){el.reportValidity();return}const key=el.getAttribute('cam-variable-name');values[key]=el.type==='checkbox'?el.checked:el.value}const result=await request(destination,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(values)});status(JSON.stringify(result,null,2));document.querySelector('#formPanel').hidden=true;await refresh()}catch(e){status(e.message)}};
+document.querySelector('#refresh').onclick=()=>refresh().catch(e=>status(e.message));refresh().catch(e=>status(e.message));
+</script></html>

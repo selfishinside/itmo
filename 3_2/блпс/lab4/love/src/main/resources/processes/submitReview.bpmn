@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_submitReview" targetNamespace="https://itmo.ru/blps/lab4" exporter="Camunda Modeler" exporterVersion="5.28.0">
+  <bpmn:process id="submitReview" name="Оставить отзыв" isExecutable="true" camunda:historyTimeToLive="30" camunda:candidateStarterGroups="ROLE_GUEST,ROLE_USER,ROLE_ADMINISTRATOR">
+    <bpmn:startEvent id="start" name="Оставить отзыв">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="bookingId" label="ID завершённой брони" type="long">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="rating" label="Оценка 1–5" type="long">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="title" label="Заголовок" type="string" />
+          <camunda:formField id="comment" label="Отзыв" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="saveReview" name="Оставить отзыв" camunda:type="external" camunda:topic="saveReview" />
+    <bpmn:endEvent id="end" name="Готово" />
+    <bpmn:sequenceFlow id="flow_start_saveReview" sourceRef="start" targetRef="saveReview" />
+    <bpmn:sequenceFlow id="flow_saveReview_end" sourceRef="saveReview" targetRef="end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_submitReview">
+    <bpmndi:BPMNPlane id="Plane_submitReview" bpmnElement="submitReview">
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="80" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="saveReview_di" bpmnElement="saveReview">
+        <dc:Bounds x="320" y="100" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_di" bpmnElement="end">
+        <dc:Bounds x="560" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="flow_start_saveReview_di" bpmnElement="flow_start_saveReview">
+        <di:waypoint x="116" y="118.0" />
+        <di:waypoint x="320" y="140.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_saveReview_end_di" bpmnElement="flow_saveReview_end">
+        <di:waypoint x="480" y="140.0" />
+        <di:waypoint x="560" y="118.0" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

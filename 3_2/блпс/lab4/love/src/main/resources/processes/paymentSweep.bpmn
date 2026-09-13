@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_paymentSweep" targetNamespace="https://itmo.ru/blps/lab4" exporter="Camunda Modeler" exporterVersion="5.28.0">
+  <bpmn:process id="paymentSweep" name="Проверить сроки оплаты" isExecutable="true" camunda:historyTimeToLive="30" camunda:candidateStarterGroups="ROLE_ADMINISTRATOR">
+    <bpmn:startEvent id="start" name="Проверить сроки оплаты">
+      <bpmn:extensionElements>
+        <camunda:formData />
+      </bpmn:extensionElements>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="sweepPayments" name="Проверить сроки оплаты" camunda:type="external" camunda:topic="sweepPayments" />
+    <bpmn:endEvent id="end" name="Готово" />
+    <bpmn:sequenceFlow id="flow_start_sweepPayments" sourceRef="start" targetRef="sweepPayments" />
+    <bpmn:sequenceFlow id="flow_sweepPayments_end" sourceRef="sweepPayments" targetRef="end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_paymentSweep">
+    <bpmndi:BPMNPlane id="Plane_paymentSweep" bpmnElement="paymentSweep">
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="80" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sweepPayments_di" bpmnElement="sweepPayments">
+        <dc:Bounds x="320" y="100" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_di" bpmnElement="end">
+        <dc:Bounds x="560" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="flow_start_sweepPayments_di" bpmnElement="flow_start_sweepPayments">
+        <di:waypoint x="116" y="118.0" />
+        <di:waypoint x="320" y="140.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_sweepPayments_end_di" bpmnElement="flow_sweepPayments_end">
+        <di:waypoint x="480" y="140.0" />
+        <di:waypoint x="560" y="118.0" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
