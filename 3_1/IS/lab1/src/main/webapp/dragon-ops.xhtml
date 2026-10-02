@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Операции над драконами</title>
+    <style type="text/css">body { padding: 20px; }</style>
+</h:head>
+<h:body>
+    <h:form id="opsForm">
+        <p:growl id="messages" showDetail="true"/>
+        <p:toolbar>
+            <p:toolbarGroup>
+                <p:button value="На главную" icon="pi pi-home" href="index.xhtml" styleClass="ui-button-secondary"/>
+            </p:toolbarGroup>
+        </p:toolbar>
+
+        <p:panel header="Группировка по head" style="margin-top:20px;">
+            <p:commandButton value="Сгруппировать" icon="pi pi-sitemap" actionListener="#{dragonOperationsBean.groupByHead}" update="headGroups messages"/>
+            <p:dataTable id="headGroups" value="#{dragonOperationsBean.headGroups.entrySet().toArray()}" var="entry" style="margin-top:10px;">
+                <p:column headerText="Head"><h:outputText value="#{entry.key}"/></p:column>
+                <p:column headerText="Количество"><h:outputText value="#{entry.value}"/></p:column>
+            </p:dataTable>
+        </p:panel>
+
+        <p:panel header="Количество по type" style="margin-top:20px;">
+            <p:panelGrid columns="3" styleClass="ui-fluid">
+                <p:selectOneMenu value="#{dragonOperationsBean.typeToCount}" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItem itemLabel="Выберите тип" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{dragonOperationsBean.types}" var="type" itemValue="#{type}" itemLabel="#{type}"/>
+                </p:selectOneMenu>
+                <p:commandButton value="Посчитать" icon="pi pi-calculator" actionListener="#{dragonOperationsBean.countByType}" update="typeResult messages"/>
+                <h:outputText id="typeResult" value="#{dragonOperationsBean.typeCount}"/>
+            </p:panelGrid>
+        </p:panel>
+
+        <p:panel header="Поиск name по подстроке" style="margin-top:20px;">
+            <p:panelGrid columns="2" styleClass="ui-fluid">
+                <p:inputText value="#{dragonOperationsBean.nameSubstring}" placeholder="Подстрока"/>
+                <p:commandButton value="Найти" icon="pi pi-search" actionListener="#{dragonOperationsBean.findByNameSubstring}" update="nameResult messages"/>
+            </p:panelGrid>
+            <p:dataTable id="nameResult" value="#{dragonOperationsBean.nameSearchResult}" var="dragon" style="margin-top:10px;">
+                <p:column headerText="ID"><h:outputText value="#{dragon.id}"/></p:column>
+                <p:column headerText="Имя"><h:outputText value="#{dragon.name}"/></p:column>
+                <p:column headerText="Тип"><h:outputText value="#{dragon.type}"/></p:column>
+            </p:dataTable>
+        </p:panel>
+
+        <p:panel header="Самая глубокая пещера" style="margin-top:20px;">
+            <p:commandButton value="Найти дракона" icon="pi pi-sort-amount-down" actionListener="#{dragonOperationsBean.findDeepestCaveDragon}" update="deepestResult messages"/>
+            <h:panelGroup id="deepestResult" layout="block" style="margin-top:10px;">
+                <h:outputText value="#{dragonOperationsBean.deepestCaveDragon == null ? 'Нет данных' : dragonOperationsBean.deepestCaveDragon.name.concat(' / depth=').concat(dragonOperationsBean.deepestCaveDragon.cave.depth)}"/>
+            </h:panelGroup>
+        </p:panel>
+
+        <p:panel header="Отправить команду убийц в пещеру" style="margin-top:20px;">
+            <p:panelGrid columns="3" styleClass="ui-fluid">
+                <p:inputNumber value="#{dragonOperationsBean.caveDepth}" decimalPlaces="2" placeholder="Глубина"/>
+                <p:commandButton value="Отправить" icon="pi pi-send" actionListener="#{dragonOperationsBean.sendKillersToCave}" update="killersResult messages"/>
+                <h:outputText id="killersResult" value="#{dragonOperationsBean.killersResult}"/>
+            </p:panelGrid>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>

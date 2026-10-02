@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Создание и изменение объектов</title>
+    <style type="text/css">body { padding: 20px; }</style>
+</h:head>
+<h:body>
+    <h:form id="editorForm">
+        <p:toolbar>
+            <p:toolbarGroup>
+                <p:button value="На главную" icon="pi pi-home" href="index.xhtml" styleClass="ui-button-secondary"/>
+            </p:toolbarGroup>
+        </p:toolbar>
+
+        <p:panel header="Создание и изменение объектов" style="margin-top:20px;">
+            <p:panelGrid columns="2" layout="grid" styleClass="ui-fluid">
+                <p:outputLabel for="objectType" value="Таблица:"/>
+                <p:selectOneMenu id="objectType" value="#{objectEditorBean.objectType}">
+                    <f:selectItem itemLabel="Dragon" itemValue="dragon"/>
+                    <f:selectItem itemLabel="Person / killer" itemValue="person"/>
+                    <f:selectItem itemLabel="Location" itemValue="location"/>
+                    <p:ajax update="targetSelect"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="mode" value="Операция:"/>
+                <p:selectOneMenu id="mode" value="#{objectEditorBean.mode}">
+                    <f:selectItem itemLabel="Создать новый" itemValue="create"/>
+                    <f:selectItem itemLabel="Изменить существующий" itemValue="edit"/>
+                    <p:ajax update="targetSelect"/>
+                </p:selectOneMenu>
+            </p:panelGrid>
+
+            <h:panelGroup id="targetSelect" layout="block" style="margin-top:20px;">
+                <p:panelGrid columns="2" layout="grid" styleClass="ui-fluid" rendered="#{objectEditorBean.mode eq 'edit'}">
+                    <p:outputLabel value="Dragon:" rendered="#{objectEditorBean.objectType eq 'dragon'}"/>
+                    <p:selectOneMenu value="#{objectEditorBean.selectedDragonId}" rendered="#{objectEditorBean.objectType eq 'dragon'}">
+                        <f:selectItem itemLabel="Выберите Dragon" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{objectEditorBean.dragons}" var="dragon" itemValue="#{dragon.id}" itemLabel="#{dragon.name} (ID: #{dragon.id})"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel value="Person:" rendered="#{objectEditorBean.objectType eq 'person'}"/>
+                    <p:selectOneMenu value="#{objectEditorBean.selectedPersonId}" rendered="#{objectEditorBean.objectType eq 'person'}">
+                        <f:selectItem itemLabel="Выберите Person" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{objectEditorBean.persons}" var="person" itemValue="#{person.id}" itemLabel="#{person.name} (ID: #{person.id})"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel value="Location:" rendered="#{objectEditorBean.objectType eq 'location'}"/>
+                    <p:selectOneMenu value="#{objectEditorBean.selectedLocationId}" rendered="#{objectEditorBean.objectType eq 'location'}">
+                        <f:selectItem itemLabel="Выберите Location" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{objectEditorBean.locations}" var="location" itemValue="#{location.id}" itemLabel="#{location.displayName} (ID: #{location.id})"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+            </h:panelGroup>
+
+            <f:facet name="footer">
+                <p:commandButton value="Перейти" icon="pi pi-arrow-right" action="#{objectEditorBean.go}" ajax="false"/>
+            </f:facet>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>

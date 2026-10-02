@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Форма Person</title>
+    <style type="text/css">body { padding: 20px; }</style>
+</h:head>
+<h:body>
+    <f:metadata>
+        <f:viewParam name="id" value="#{personViewBean.personId}"/>
+        <f:viewAction action="#{personViewBean.loadPerson}"/>
+    </f:metadata>
+    <h:form id="personForm">
+        <p:panel header="#{personViewBean.personId == null ? 'Создание Person' : 'Редактирование Person'}">
+            <p:messages id="messages" showDetail="true"/>
+            <p:panelGrid id="personGrid" columns="2" layout="grid" styleClass="ui-fluid">
+                <p:outputLabel for="name" value="Имя:"/>
+                <p:inputText id="name" value="#{personViewBean.selectedPerson.name}" required="true"/>
+
+                <p:outputLabel for="eyeColor" value="Цвет глаз:"/>
+                <p:selectOneMenu id="eyeColor" value="#{personViewBean.selectedPerson.eyeColor}" required="true" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItem itemLabel="Выберите цвет" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{personViewBean.colors}" var="color" itemValue="#{color}" itemLabel="#{color}"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="hairColor" value="Цвет волос:"/>
+                <p:selectOneMenu id="hairColor" value="#{personViewBean.selectedPerson.hairColor}" required="true" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItem itemLabel="Выберите цвет" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{personViewBean.colors}" var="color" itemValue="#{color}" itemLabel="#{color}"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="birthday" value="Birthday (yyyy-MM-dd):"/>
+                <p:inputText id="birthday" value="#{personViewBean.birthday}" required="true" placeholder="1990-01-31"/>
+
+                <p:outputLabel for="height" value="Рост:"/>
+                <p:inputNumber id="height" value="#{personViewBean.selectedPerson.height}" minValue="1"/>
+
+                <p:outputLabel for="weight" value="Вес:"/>
+                <p:inputNumber id="weight" value="#{personViewBean.selectedPerson.weight}" minValue="1"/>
+
+                <p:outputLabel for="nationality" value="Страна:"/>
+                <p:selectOneMenu id="nationality" value="#{personViewBean.selectedPerson.nationality}" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItem itemLabel="Не выбрана" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{personViewBean.countries}" var="country" itemValue="#{country}" itemLabel="#{country}"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="useExistingLocation" value="Использовать Location из таблицы:"/>
+                <p:selectBooleanCheckbox id="useExistingLocation" value="#{personViewBean.useExistingLocation}">
+                    <p:ajax update="locationSelect inlineLocation"/>
+                </p:selectBooleanCheckbox>
+
+                <p:outputLabel for="locationSelect" value="Location:"/>
+                <p:selectOneMenu id="locationSelect" value="#{personViewBean.selectedLocationId}" disabled="#{not personViewBean.useExistingLocation}">
+                    <f:selectItem itemLabel="Выберите Location" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{personViewBean.allLocations}" var="location" itemValue="#{location.id}" itemLabel="#{location.displayName} (ID: #{location.id})"/>
+                </p:selectOneMenu>
+            </p:panelGrid>
+
+            <p:panelGrid id="inlineLocation" columns="2" layout="grid" styleClass="ui-fluid" rendered="#{not personViewBean.useExistingLocation}">
+                <p:outputLabel for="locName" value="Новая Location.name:"/>
+                <p:inputText id="locName" value="#{personViewBean.selectedPerson.location.name}" required="#{not personViewBean.useExistingLocation}"/>
+                <p:outputLabel for="locX" value="Location.x:"/>
+                <p:inputNumber id="locX" value="#{personViewBean.selectedPerson.location.x}" decimalPlaces="2" required="#{not personViewBean.useExistingLocation}"/>
+                <p:outputLabel for="locY" value="Location.y:"/>
+                <p:inputNumber id="locY" value="#{personViewBean.selectedPerson.location.y}" required="#{not personViewBean.useExistingLocation}"/>
+            </p:panelGrid>
+
+            <f:facet name="footer">
+                <p:commandButton value="Сохранить" icon="pi pi-check" action="#{personViewBean.saveOrUpdatePerson}" process="@form" update="messages personGrid"/>
+                <p:button value="Отмена" icon="pi pi-times" href="persons.xhtml" styleClass="ui-button-secondary" style="margin-left:.5rem;"/>
+            </f:facet>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>

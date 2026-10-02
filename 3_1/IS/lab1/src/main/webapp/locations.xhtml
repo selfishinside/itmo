@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Локации</title>
+    <style type="text/css">body { padding: 20px; }</style>
+</h:head>
+<h:body>
+    <h:form id="mainForm">
+        <p:growl id="messages" showDetail="true"/>
+        <p:toolbar>
+            <p:toolbarGroup>
+                <p:button value="На главную" icon="pi pi-home" href="index.xhtml" styleClass="ui-button-secondary"/>
+            </p:toolbarGroup>
+        </p:toolbar>
+
+        <p:panel header="Фильтрация по названию" style="margin-top:20px;">
+            <p:panelGrid columns="4" styleClass="ui-fluid">
+                <p:selectOneMenu value="#{locationViewBean.selectedFilterColumn}">
+                    <f:selectItem itemLabel="Колонка" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{locationViewBean.availableColumns}"/>
+                </p:selectOneMenu>
+                <p:inputText value="#{locationViewBean.filterValue}" placeholder="Полное совпадение"/>
+                <p:commandButton value="Найти" icon="pi pi-search" actionListener="#{locationViewBean.applyGlobalFilter}" update="locationTable"/>
+                <p:commandButton value="Сброс" icon="pi pi-times" actionListener="#{locationViewBean.clearGlobalFilter}" update="locationTable" styleClass="ui-button-secondary"/>
+            </p:panelGrid>
+        </p:panel>
+
+        <p:dataTable id="locationTable" var="location" value="#{locationViewBean.filteredLocations}" paginator="true" rows="10"
+                     rowsPerPageTemplate="5,10,20" style="margin-top:20px;" emptyMessage="Location не найдены">
+            <p:column headerText="ID" sortBy="#{location.id}"><h:outputText value="#{location.id}"/></p:column>
+            <p:column headerText="Name" sortBy="#{location.name}"><h:outputText value="#{location.name}"/></p:column>
+            <p:column headerText="X" sortBy="#{location.x}"><h:outputText value="#{location.x}"/></p:column>
+            <p:column headerText="Y" sortBy="#{location.y}"><h:outputText value="#{location.y}"/></p:column>
+            <p:column headerText="Действия" style="width:8rem;text-align:center;">
+                <p:button icon="pi pi-pencil" outcome="location-form.xhtml"><f:param name="id" value="#{location.id}"/></p:button>
+                <p:commandButton icon="pi pi-trash" actionListener="#{locationViewBean.deleteLocation(location)}" update="mainForm" style="margin-left:.5rem">
+                    <p:confirm header="Подтверждение" message="Удалить Location #{location.name}?" icon="pi pi-info-circle"/>
+                </p:commandButton>
+            </p:column>
+        </p:dataTable>
+    </h:form>
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" responsive="true">
+        <p:commandButton value="Нет" type="button" styleClass="ui-confirmdialog-no ui-button-secondary"/>
+        <p:commandButton value="Да" type="button" styleClass="ui-confirmdialog-yes"/>
+    </p:confirmDialog>
+</h:body>
+</html>

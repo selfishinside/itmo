@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Форма дракона</title>
+    <style type="text/css">
+        body { padding: 20px; }
+        .faces-messages-list { list-style-type:none; padding:0; margin:0; }
+        .faces-message-item { display:block; margin:.5rem 0; padding:1rem; border-radius:6px; border-left:.5rem solid; }
+        .faces-message-error { border-color:#EF4444; background:#FEF2F2; color:#7f1d1d; }
+    </style>
+</h:head>
+<h:body>
+    <f:metadata>
+        <f:viewParam name="id" value="#{dragonViewBean.dragonId}"/>
+        <f:viewAction action="#{dragonViewBean.loadDragon}"/>
+    </f:metadata>
+
+    <h:form id="dragonForm">
+        <p:panel header="#{dragonViewBean.dragonId == null ? 'Создание дракона' : 'Редактирование дракона'}">
+            <h:messages id="messages" styleClass="faces-messages-list" errorClass="faces-message-item faces-message-error"/>
+
+            <p:panelGrid id="formGrid" columns="2" layout="grid" styleClass="ui-fluid" style="margin-top:20px;">
+                <p:outputLabel for="name" value="Имя:"/>
+                <p:inputText id="name" value="#{dragonViewBean.selectedDragon.name}" required="true" requiredMessage="Имя обязательно"/>
+
+                <p:outputLabel for="coordX" value="Coordinates.x (max 188):"/>
+                <p:inputNumber id="coordX" value="#{dragonViewBean.selectedDragon.coordinates.x}" maxValue="188" required="true"/>
+
+                <p:outputLabel for="coordY" value="Coordinates.y (&gt; -707):"/>
+                <p:inputNumber id="coordY" value="#{dragonViewBean.selectedDragon.coordinates.y}" minValue="-706" required="true"/>
+
+                <p:outputLabel for="depth" value="Глубина пещеры:"/>
+                <p:inputNumber id="depth" value="#{dragonViewBean.selectedDragon.cave.depth}" decimalPlaces="2" required="true"/>
+
+                <p:outputLabel for="age" value="Возраст:"/>
+                <p:inputNumber id="age" value="#{dragonViewBean.selectedDragon.age}" minValue="1" required="true"/>
+
+                <p:outputLabel for="color" value="Цвет:"/>
+                <p:selectOneMenu id="color" value="#{dragonViewBean.selectedDragon.color}" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItem itemLabel="Без цвета" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{dragonViewBean.colors}" var="color" itemValue="#{color}" itemLabel="#{color}"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="type" value="Тип:"/>
+                <p:selectOneMenu id="type" value="#{dragonViewBean.selectedDragon.type}" required="true" requiredMessage="Тип обязателен" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItem itemLabel="Выберите тип" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{dragonViewBean.types}" var="type" itemValue="#{type}" itemLabel="#{type}"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="character" value="Характер:"/>
+                <p:selectOneMenu id="character" value="#{dragonViewBean.selectedDragon.character}" required="true" requiredMessage="Характер обязателен" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItem itemLabel="Выберите характер" itemValue="#{null}" noSelectionOption="true"/>
+                    <f:selectItems value="#{dragonViewBean.characters}" var="character" itemValue="#{character}" itemLabel="#{character}"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="headSize" value="Head.size:"/>
+                <p:inputNumber id="headSize" value="#{dragonViewBean.selectedDragon.head.size}" required="true"/>
+
+                <p:outputLabel for="eyesCount" value="Head.eyesCount:"/>
+                <p:inputNumber id="eyesCount" value="#{dragonViewBean.selectedDragon.head.eyesCount}"/>
+
+                <p:outputLabel for="toothCount" value="Head.toothCount:"/>
+                <p:inputNumber id="toothCount" value="#{dragonViewBean.selectedDragon.head.toothCount}" required="true"/>
+
+                <p:outputLabel for="hasKiller" value="Связать с убийцей:"/>
+                <p:selectBooleanCheckbox id="hasKiller" value="#{dragonViewBean.hasKiller}">
+                    <p:ajax update="killerPanel"/>
+                </p:selectBooleanCheckbox>
+            </p:panelGrid>
+
+            <p:panel id="killerPanel" header="Killer" style="margin-top:20px;" rendered="#{dragonViewBean.hasKiller}">
+                <p:panelGrid columns="2" layout="grid" styleClass="ui-fluid">
+                    <p:outputLabel for="existingKiller" value="Существующий killer:"/>
+                    <p:selectOneMenu id="existingKiller" value="#{dragonViewBean.selectedKillerId}">
+                        <f:selectItem itemLabel="Создать/редактировать ниже" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{dragonViewBean.allKillers}" var="killer" itemValue="#{killer.id}" itemLabel="#{killer.name} (ID: #{killer.id})"/>
+                        <p:ajax update="killerDetails"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+
+                <p:panelGrid id="killerDetails" columns="2" layout="grid" styleClass="ui-fluid" rendered="#{dragonViewBean.selectedKillerId == null}">
+                    <p:outputLabel for="killerName" value="Имя:"/>
+                    <p:inputText id="killerName" value="#{dragonViewBean.selectedDragon.killer.name}" required="#{dragonViewBean.hasKiller and dragonViewBean.selectedKillerId == null}" requiredMessage="Имя killer обязательно"/>
+
+                    <p:outputLabel for="eyeColor" value="Цвет глаз:"/>
+                    <p:selectOneMenu id="eyeColor" value="#{dragonViewBean.selectedDragon.killer.eyeColor}" required="#{dragonViewBean.hasKiller and dragonViewBean.selectedKillerId == null}" converter="omnifaces.SelectItemsConverter">
+                        <f:selectItem itemLabel="Выберите цвет" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{dragonViewBean.colors}" var="color" itemValue="#{color}" itemLabel="#{color}"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel for="hairColor" value="Цвет волос:"/>
+                    <p:selectOneMenu id="hairColor" value="#{dragonViewBean.selectedDragon.killer.hairColor}" required="#{dragonViewBean.hasKiller and dragonViewBean.selectedKillerId == null}" converter="omnifaces.SelectItemsConverter">
+                        <f:selectItem itemLabel="Выберите цвет" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{dragonViewBean.colors}" var="color" itemValue="#{color}" itemLabel="#{color}"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel for="birthday" value="Дата рождения (yyyy-MM-dd):"/>
+                    <p:inputText id="birthday" value="#{dragonViewBean.killerBirthday}" required="#{dragonViewBean.hasKiller and dragonViewBean.selectedKillerId == null}" placeholder="2000-01-31"/>
+
+                    <p:outputLabel for="height" value="Рост:"/>
+                    <p:inputNumber id="height" value="#{dragonViewBean.selectedDragon.killer.height}" minValue="1"/>
+
+                    <p:outputLabel for="weight" value="Вес:"/>
+                    <p:inputNumber id="weight" value="#{dragonViewBean.selectedDragon.killer.weight}" minValue="1"/>
+
+                    <p:outputLabel for="nationality" value="Национальность:"/>
+                    <p:selectOneMenu id="nationality" value="#{dragonViewBean.selectedDragon.killer.nationality}" converter="omnifaces.SelectItemsConverter">
+                        <f:selectItem itemLabel="Не выбрана" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{dragonViewBean.countries}" var="country" itemValue="#{country}" itemLabel="#{country}"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel for="useExistingLocation" value="Использовать существующую Location:"/>
+                    <p:selectBooleanCheckbox id="useExistingLocation" value="#{dragonViewBean.useExistingKillerLocation}">
+                        <p:ajax update="killerLocationSelect killerLocationInline"/>
+                    </p:selectBooleanCheckbox>
+
+                    <p:outputLabel for="killerLocationSelect" value="Location из таблицы:"/>
+                    <p:selectOneMenu id="killerLocationSelect" value="#{dragonViewBean.selectedKillerLocationId}" disabled="#{not dragonViewBean.useExistingKillerLocation}">
+                        <f:selectItem itemLabel="Выберите Location" itemValue="#{null}" noSelectionOption="true"/>
+                        <f:selectItems value="#{dragonViewBean.allLocations}" var="location" itemValue="#{location.id}" itemLabel="#{location.displayName} (ID: #{location.id})"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+
+                <p:panelGrid id="killerLocationInline" columns="2" layout="grid" styleClass="ui-fluid" rendered="#{dragonViewBean.selectedKillerId == null and not dragonViewBean.useExistingKillerLocation}">
+                    <p:outputLabel for="locX" value="Location.x:"/>
+                    <p:inputNumber id="locX" value="#{dragonViewBean.selectedDragon.killer.location.x}" decimalPlaces="2" required="#{dragonViewBean.hasKiller and dragonViewBean.selectedKillerId == null}"/>
+
+                    <p:outputLabel for="locY" value="Location.y:"/>
+                    <p:inputNumber id="locY" value="#{dragonViewBean.selectedDragon.killer.location.y}" required="#{dragonViewBean.hasKiller and dragonViewBean.selectedKillerId == null}"/>
+
+                    <p:outputLabel for="locName" value="Location.name:"/>
+                    <p:inputText id="locName" value="#{dragonViewBean.selectedDragon.killer.location.name}" required="#{dragonViewBean.hasKiller and dragonViewBean.selectedKillerId == null}" requiredMessage="Название локации обязательно"/>
+                </p:panelGrid>
+            </p:panel>
+
+            <f:facet name="footer">
+                <p:commandButton value="Сохранить" icon="pi pi-check" action="#{dragonViewBean.saveOrUpdateDragon}" process="@form" update="messages formGrid" partialSubmit="true"/>
+                <p:button value="Отмена" icon="pi pi-times" href="dragons.xhtml" style="margin-left:.5rem;" styleClass="ui-button-secondary"/>
+            </f:facet>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
