@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <servlet><servlet-name>json-error</servlet-name><servlet-class>ru.itmo.soa.workers.JsonErrorServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>json-error</servlet-name><url-pattern>/json-error</url-pattern></servlet-mapping>
+  <error-page><location>/json-error</location></error-page>
+  <security-constraint>
+    <web-resource-collection><web-resource-name>HTTPS API</web-resource-name><url-pattern>/*</url-pattern></web-resource-collection>
+    <user-data-constraint><transport-guarantee>CONFIDENTIAL</transport-guarantee></user-data-constraint>
+  </security-constraint>
+</web-app>
