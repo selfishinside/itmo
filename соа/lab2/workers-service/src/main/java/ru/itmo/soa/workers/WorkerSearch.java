@@ -39,6 +39,12 @@ final class WorkerSearch {
         size = (int) number("size", 1, 100, 20);
         number("id", 1, Long.MAX_VALUE, 1);
         for (String prefix : RANGES.keySet()) {
+            if (prefix.equals("coordinatesY")) {
+                double lo = filter.has("coordinatesYMin") ? Validation.decimal(filter.get("coordinatesYMin"), 400, "coordinatesYMin") : -Double.MAX_VALUE;
+                double hi = filter.has("coordinatesYMax") ? Validation.decimal(filter.get("coordinatesYMax"), 400, "coordinatesYMax") : Double.MAX_VALUE;
+                Validation.require(lo <= hi, 400, "Invalid coordinatesY range");
+                continue;
+            }
             long min = prefix.equals("salary") ? 1 : Integer.MIN_VALUE;
             long max = prefix.equals("coordinatesX") ? 225 : Integer.MAX_VALUE;
             long lo = number(prefix + "Min", min, max, min);
@@ -86,22 +92,9 @@ final class WorkerSearch {
             return search;
         }
         query.forEach((key, values) -> {
-            Validation.require(FIELDS.contains(key), 400, "Unknown query parameter: " + key);
-            boolean array = ARRAYS.containsKey(key) || key.equals("sort");
-            if (array) {
-                if (values.size() == 1 && values.get(0).startsWith("[")) {
-                    ObjectNode parsed = Json.parse("{\"value\":" + values.get(0) + "}", 400);
-                    result.set(key, parsed.get("value"));
-                } else {
-                    ArrayNode list = result.putArray(key);
-                    values.forEach(value -> { for (String item : value.split(",", -1)) list.add(item); });
-                }
-            } else {
-                Validation.require(values.size() == 1, 400, "Repeated query parameter: " + key);
-                String value = values.get(0);
-                if (Set.of("name", "personPassportID", "creationDateFrom", "creationDateTo").contains(key)) result.put(key, value);
-                else result.put(key, Validation.pathInteger(value, Long.MIN_VALUE, Long.MAX_VALUE, 400, key));
-            }
+            Validation.require(Set.of("page", "size").contains(key), 400, "Unknown query parameter: " + key);
+            Validation.require(values.size() == 1, 400, "Repeated query parameter: " + key);
+            result.put(key, Validation.pathInteger(values.get(0), 1, Integer.MAX_VALUE, 400, key));
         });
         return result;
     }
@@ -123,9 +116,9 @@ final class WorkerSearch {
         if (filter.has("personPassportID") && (!w.path("person").isObject()
                 || !w.path("person").path("passportID").asText().equals(filter.get("personPassportID").textValue()))) return false;
         for (var entry : RANGES.entrySet()) {
-            long value = at(w, entry.getValue()).longValue();
-            if (filter.has(entry.getKey() + "Min") && value < filter.get(entry.getKey() + "Min").longValue()) return false;
-            if (filter.has(entry.getKey() + "Max") && value > filter.get(entry.getKey() + "Max").longValue()) return false;
+            var value = at(w, entry.getValue()).decimalValue();
+            if (filter.has(entry.getKey() + "Min") && value.compareTo(filter.get(entry.getKey() + "Min").decimalValue()) < 0) return false;
+            if (filter.has(entry.getKey() + "Max") && value.compareTo(filter.get(entry.getKey() + "Max").decimalValue()) > 0) return false;
         }
         String date = w.path("creationDate").textValue();
         if (filter.has("creationDateFrom") && date.compareTo(filter.get("creationDateFrom").textValue()) < 0) return false;
@@ -153,7 +146,7 @@ final class WorkerSearch {
         if (Validation.ENUMS.containsKey(field)) {
             List<String> order = Validation.ENUMS.get(field);
             result = Integer.compare(order.indexOf(x.textValue()), order.indexOf(y.textValue()));
-        } else if (x.isNumber()) result = Long.compare(x.longValue(), y.longValue());
+        } else if (x.isNumber()) result = x.decimalValue().compareTo(y.decimalValue());
         else result = x.textValue().compareTo(y.textValue());
         return descending ? -result : result;
     }

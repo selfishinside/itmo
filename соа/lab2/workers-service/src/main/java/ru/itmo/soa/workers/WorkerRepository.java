@@ -101,7 +101,6 @@ public final class WorkerRepository {
                 while (buffer.hasRemaining()) channel.write(buffer);
                 channel.force(true);
             }
-            // Replace the file atomically.
             Files.move(temporary, file, StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
             workers = next;
             organizations = known;
@@ -247,7 +246,6 @@ public final class WorkerRepository {
         try {
             Validation.require(value != null && value.length() <= 128, 400, "Invalid coefficient");
             BigDecimal coeff = new BigDecimal(value);
-            // Limit coefficient size before calculation.
             Validation.require(coeff.signum() > 0 && Math.abs((long) coeff.scale()) <= 1000 && coeff.precision() <= 128,
                     400, "Invalid coefficient");
             return coeff;

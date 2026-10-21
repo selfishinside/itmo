@@ -22,8 +22,13 @@ import java.security.MessageDigest;
 @Produces(MediaType.APPLICATION_JSON)
 public class WorkersResource {
     private final WorkerRepository repository;
+    private final String internalToken;
 
-    public WorkersResource(WorkerRepository repository) { this.repository = repository; }
+    public WorkersResource(WorkerRepository repository) {
+        this.repository = repository;
+        internalToken = System.getProperty("workers.internal.token", System.getenv("WORKERS_INTERNAL_TOKEN"));
+        if (internalToken == null || internalToken.isBlank()) throw new IllegalStateException("Internal token is required");
+    }
 
     @GET @Path("workers")
     public Response list(@Context UriInfo uri) {
@@ -86,7 +91,7 @@ public class WorkersResource {
     @POST @Path("internal/organizations/{orgId}/index/{coeff}")
     public Response index(@PathParam("orgId") String orgId, @PathParam("coeff") String coeff,
                           @HeaderParam("X-Internal-Token") String token) {
-        String expected = System.getProperty("workers.internal.token", "local-development-token");
+        String expected = internalToken;
         if (token == null || expected.isBlank() || !MessageDigest.isEqual(expected.getBytes(StandardCharsets.UTF_8), token.getBytes(StandardCharsets.UTF_8))) {
             throw new ApiException(401, "Invalid internal token");
         }

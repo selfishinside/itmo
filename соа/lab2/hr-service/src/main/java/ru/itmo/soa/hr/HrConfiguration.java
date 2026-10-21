@@ -44,8 +44,9 @@ public class HrConfiguration implements WebMvcConfigurer {
             ssl.init(null, trust.getTrustManagers(), null);
             builder.sslContext(ssl);
         }
-        return new WorkersClient(builder.build(), base,
-                setting("workers.internal.token", "WORKERS_INTERNAL_TOKEN", "local-development-token"));
+        String token = setting("workers.internal.token", "WORKERS_INTERNAL_TOKEN", "");
+        if (token.isBlank()) throw new IllegalStateException("Internal token is required");
+        return new WorkersClient(builder.build(), base, token);
     }
 
     @Override

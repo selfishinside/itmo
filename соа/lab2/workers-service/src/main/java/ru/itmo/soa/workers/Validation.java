@@ -44,6 +44,12 @@ final class Validation {
         }
     }
 
+    static double decimal(JsonNode value, int status, String name) {
+        require(value != null && value.isNumber() && Double.isFinite(value.doubleValue()),
+                status, name + " must be a finite number");
+        return value.doubleValue();
+    }
+
     static String text(JsonNode value, int status, String name) {
         require(value != null && value.isTextual(), status, name + " must be a string");
         return value.textValue();
@@ -67,13 +73,13 @@ final class Validation {
         ObjectNode w = input.deepCopy();
         if (w.has("id")) integer(w.get("id"), 1, Long.MAX_VALUE, code, "id");
         if (w.has("creationDate")) date(w.get("creationDate"), code, "creationDate");
-        require(!text(w.get("name"), code, "name").isEmpty(), code, "name must not be empty");
+        require(!text(w.get("name"), code, "name").isBlank(), code, "name must not be empty");
         integer(w.get("salary"), 1, Integer.MAX_VALUE, code, "salary");
         require(w.path("coordinates").isObject(), code, "coordinates must be an object");
         ObjectNode coordinates = (ObjectNode) w.get("coordinates");
         fields(coordinates, Set.of("x", "y"), code);
         integer(coordinates.get("x"), Integer.MIN_VALUE, 225, code, "coordinates.x");
-        integer(coordinates.get("y"), Integer.MIN_VALUE, Integer.MAX_VALUE, code, "coordinates.y");
+        decimal(coordinates.get("y"), code, "coordinates.y");
         for (String field : List.of("position", "status")) {
             if (w.hasNonNull(field)) enumValue(w.get(field), field, code);
             else w.putNull(field);

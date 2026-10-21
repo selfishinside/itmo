@@ -1,6 +1,7 @@
 package ru.itmo.soa.workers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,6 +11,7 @@ import jakarta.ws.rs.core.Response;
 
 final class Json {
     static final ObjectMapper MAPPER = new ObjectMapper()
+            .enable(JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN)
             .enable(DeserializationFeature.FAIL_ON_TRAILING_TOKENS)
             .enable(DeserializationFeature.FAIL_ON_READING_DUP_TREE_KEY);
 
