@@ -1,0 +1,4 @@
+kernel_size,python_seconds,opencv_seconds,opencv_speedup,equal,max_difference
+3,3.173095,0.013606,233.21,True,0
+5,9.664019,0.00238,4059.8,True,0
+7,22.744402,0.006317,3600.74,True,0
